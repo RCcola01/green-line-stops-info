@@ -37,10 +37,12 @@ html{
 }
 
 button{
-	background-color: rgba(147,199,46,1);
+	background-color: rgba(88,196,4,1);
+	color: white;
 	border-radius: 15px;
+	border-color: rgba(88,196,4,1);
 	height: 8em;
 	width: 18em;
 	margin: 10px;
-	box-shadow: 0px 6px 0px darkgreen;
+	box-shadow: 0px 6px 0px rgb(65,128,16);
 }
