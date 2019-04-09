@@ -1,3 +1,8 @@
+@font-face{
+  font-family: bebasNeue;
+  src: url(../fonts/BebasNeue-Regular.otf);
+}
+
 html{
 	box-sizing: border-box;
 
@@ -14,6 +19,15 @@ html{
 	object-fit: cover;
 	display: flex;
 	text-align:center;
+}
+
+p{
+   font-family: Lato;
+}
+
+a{
+   text-decoration: none;
+   color: #000;
 }
 
 .heading h1{
@@ -37,12 +51,49 @@ html{
 }
 
 button{
-	background-color: rgba(88,196,4,1);
+	background-color: #14B71C;
 	color: white;
 	border-radius: 15px;
-	border-color: rgba(88,196,4,1);
-	height: 8em;
+    border: 0px;
+	height: 5em;
 	width: 18em;
 	margin: 10px;
-	box-shadow: 0px 6px 0px rgb(65,128,16);
+	box-shadow: 6px 6px 0px #555;
+    font-weight: bold; 
 }
+
+.green-1{
+   background-color: #0c8A16;
+}
+
+.instructions-title{
+   text-align: center;
+   color: #FFF;
+   font-family: bebasNeue;
+   font-size: 5em;
+}
+
+.instructions-box{
+   width: 80%;
+   height: 20em;
+   background-color: #FFF;
+   box-shadow: 6px 6px 0px #555;
+   padding: .5em;
+}
+
+.flex-center{
+   display: flex;
+   justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
