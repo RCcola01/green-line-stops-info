@@ -88,6 +88,37 @@ button{
 
 
 
+/*.st1:hover {
+    fill: #a9a9a9;
+    opacity: 0.6;
+  }
+*/
+circle:hover {
+  stroke: lightgrey;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: lightgrey;
+  cursor: pointer;
+}
+/* #path67 {
+  fill: none !important;
+  stroke: #A9A9A9 !important;
+  cursor: default;
+} */
+#info-box {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: #ffffff;
+  border: 2px solid #BF0A30;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: arial;
+}
+
+
 
 
 
