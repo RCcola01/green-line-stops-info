@@ -127,23 +127,78 @@ circle:hover {
   left: 0px;
   z-index: 1;
   background-color: #ffffff;
-  border: 2px solid #BF0A30;
+  border: 2px solid #14B71C;
   border-radius: 5px;
   padding: 5px;
-  font-family: arial;
+  font-family: Lato;
 }
 
-#Hynes::after{
-   content: '';
-   display: block;
-   width: 100px;
-   height: 100px;
-   background-color: #999;
+.border{
+   margin: 0;
+   border: 10px #0C8A16 solid;
 }
 
-#Hynes:hover{
-   
+/* Original Source: https://codepen.io/anon/pen/EGvKZW */
+/****************   Overlay   ******************/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
 }
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    width: 95%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup-imgs{
+    display: grid;
+    width: 95%;
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(auto);
+    justify-items: center; /* Horizontal */
+    align-items: center; /* Vertical */
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+}
+
+.popup-imgs img{
+    width: 100%;
+    max-height: 250px;
+}
+
+.popup div p{
+    padding: 0 5% 0 2%;
+}
+
+/************************************/
 
 
 /* Mobile */
