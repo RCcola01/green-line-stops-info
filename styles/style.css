@@ -31,6 +31,8 @@ h1, h2, h3, h4, h5, h6{
     width: 100%;
 }
 
+
+/* Image Source: https://www.mbta.com/schedules/subway */
 .background_map{
    width: 100%;
    background: url(../images/MBTA_Crop.png) 100% 10%;
