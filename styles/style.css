@@ -117,6 +117,14 @@ circle:hover {
   fill: lightgrey;
   cursor: pointer;
 }
+
+ellipse:hover {
+  stroke: lightgrey;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: lightgrey;
+  cursor: pointer;
+}
 /* #path67 {
   fill: none !important;
   stroke: #A9A9A9 !important;
