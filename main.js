@@ -1,4 +1,4 @@
-$("circle").hover(function(e) {
+$("circle, ellipse").hover(function(e) {
   $('#info-box').css('display','block');
   $('#info-box').html($(this).data('info'));
 });
