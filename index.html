@@ -19,10 +19,23 @@
    <p class="intro">Do you ever sit on the B line and think about how many stops there are? What if you could get rid of a few? How much faster could you go? Check out some information on various B-Line stops to understand how it’s utilized and supported.</p>
 	<div class="buttons">
 		<button onclick="window.location.href='bline.html'">Get Started</button>
-		<button onclick="window.location.href='instructions.html'">Instructions</button>
+		<a href="#instructions_popup"> <button class="button_2">Instructions</button> </a>
 	</div>
-  <!-- <script src="js/scripts.js"></script> -->
+   
+      <div id="instructions_popup" class="overlay">
+          <div class="popup">
+              <a class="close" href="#">&times;</a> 
+              <div>
+                  <p> On the next page, you will see the MBTA green line. Hover over (or tap if you’re on a touch screen) to see the
+                  name of each stop and information about it. You can see the stop name, average ridership, and how fast the T would travel 
+                     without the stop. Explore the tradeoff between riders serviced and speed on the next page!  </p>
+              </div>
+          </div>
+      </div>
+   
+   
+   
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+   <script src="main.js"></script>
 </body>
-
-
 </html>
