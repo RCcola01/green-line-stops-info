@@ -8,7 +8,6 @@
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body class="border">
-<div id="info-box"></div>
 
 <div class="header">
        <div class="background_map"></div>
@@ -16,21 +15,31 @@
        <h2> Time Saving Mode </h2>
 </div>
 
-<label class="switch"> 
-	<p>Track total time saved</p>
-  <input type="checkbox" id="total-toggle">
-  <span class="slider round"></span>
-</label>
+<p id="instruction-box">Click on each stop to see how much time you would save if the stop were to be eliminated. Toggle the "Track Total Time Saved" switch to see how much time you can save altogether</p>
 
-<div class="time-save-form">
-	<h2 class="time-save-form" id="header"> By eliminating STOP you would save</h2>
-	<p>  </p>
-	<p class="time-save-form" id="min-sec"> <b>0</b> m <b>0</b> s</p>
+<div class="grid-container">
 
-	<p class="time-save-form" id="time-save-total" style="display:none"> Total Time Saved: </p>
-	<button class=class="time-save-form" id="reset"> Start Over </button>
-</div>  
+	<div class="time-save-display">
+		<h2 class="time-save-display" id="header"> Eliminating Park Street Saves:</h2>
+		<p>  </p>
+		<p class="time-save-display" id="min-sec"> <b>0</b> m <b>0</b> s</p>
 
+		<p class="time-save-diplay" id="time-save-total" style="display:none"> Total Time Saved: </p>
+	</div>  
+
+	<div class="toggle-switch">
+		<p id="toggle-title"><b>Track total time saved</b></p>
+		<label class="switch"> 
+	  		<input type="checkbox" id="total-toggle">
+	  		<span class="slider round"></span>
+		</label>
+		<p> </p>
+		<button class=class="time-save-form" id="reset"> Start Over </button>
+	</div>
+
+
+	
+</div>
 
    
    <?xml version="1.0" encoding="utf-8"?>
