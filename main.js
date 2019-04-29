@@ -1,6 +1,7 @@
 $("circle, ellipse").hover(function(e) {
   $('#info-box').css('display','block');
   $('#info-box').html($(this).data('info'));
+  
 });
 
 $("path, circle").mouseleave(function(e) {
