@@ -189,7 +189,7 @@ ellipse:hover {
   margin-right: 12em;
   display: grid;
   grid-template-columns: 15em 3em;
-  grid-column-gap: 5em;
+  grid-column-gap: 15px;
   position: relative;
   top: 18em;
 }
@@ -391,6 +391,42 @@ svg{
       margin: -1.5em 0 1em;
    }   
 }
+
+@media only screen and (max-width: 975px) {
+
+  .grid-container{
+    display:flex;
+    top: 30em;
+    width: 55%;
+    
+/*    float: right;
+    margin-right: 12em;
+    display: grid;
+    grid-template-columns: 20% 20%;
+    grid-column-gap: 20%;
+    position: relative;
+    top: 30em;*/
+
+  }
+
+  .time-save-display{
+    right: auto;
+    float: left;
+    margin-top:0;
+    margin-right: 2em;
+    top: 0;
+    width: auto;
+  }
+
+  .toggle-switch{
+    margin-top: 0;
+  }
+
+
+
+
+}
+
 
 @media only screen and (max-width: 500px) {
    .header h1{
