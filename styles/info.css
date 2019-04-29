@@ -1,0 +1,208 @@
+@font-face{
+   font-family: bebasNeue;
+   src: url(../fonts/BebasNeue-Regular.otf);
+}
+
+html{
+   box-sizing: border-box;
+
+}
+*, *:before, *:after{
+   box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6{
+   font-family: bebasNeue;
+}
+
+.header{
+   width: 100%;
+   height: 50vh;
+   display: flex;
+   position: relative;
+   top: 0;
+}
+
+.header h1{
+   color: rgba(0,0,0,1);
+   padding: 5vh 0 0 0;
+   font-size: 7vw;
+   text-align: center;
+   width: 100%;
+   letter-spacing: 4px;
+}
+
+
+/* Image Source: https://www.mbta.com/schedules/subway */
+.background_map{
+   width: 100%;
+   background: url(../images/MBTA_Crop.png) 100% 10%;
+   object-fit: fill;
+   opacity: .30;
+   position: absolute;
+   z-index: -1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+p{
+   font-family: Lato;
+}
+
+a{
+   text-decoration: none;
+   color: #000;
+}
+
+.intro{
+   text-align: center;
+   margin: 60px 10% 0 10%;
+}
+
+.buttons{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-top: 60px;
+}
+
+button{
+   background-color: #14B71C;
+   color: white;
+   border-radius: 15px;
+   border: 0px;
+   height: 5em;
+   width: 18em;
+   margin: 10px;
+   box-shadow: 6px 6px 0px #555;
+   font-weight: bold; 
+}
+
+.button_2{
+   background-color: #00009C; 
+}
+
+.green-1{
+   background-color: #0C8A16;
+}
+
+.green-2{
+   background-color: #14B71C;
+}
+
+.green-3{
+   background-color: #169A66;
+}
+
+.instructions-title{
+   text-align: center;
+   color: #FFF;
+   font-family: bebasNeue;
+   font-size: 5em;
+}
+
+.instructions-box{
+   width: 90%;
+   height: auto;
+   background-color: #FFF;
+   box-shadow: 6px 6px 0px #555;
+   padding: 1em 2em 1em 2em;
+}
+
+.flex-center{
+   display: flex;
+   justify-content: center;
+}
+
+circle:hover {
+   stroke: lightgrey;
+   stroke-width:2px;
+   stroke-linejoin: round;
+   fill: lightgrey;
+   cursor: pointer;
+}
+
+ellipse:hover {
+   stroke: lightgrey;
+   stroke-width:2px;
+   stroke-linejoin: round;
+   fill: lightgrey;
+   cursor: pointer;
+}
+/* #path67 {
+fill: none !important;
+stroke: #A9A9A9 !important;
+cursor: default;
+} */
+#info-box {
+   display: none;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   z-index: 1;
+   background-color: #ffffff;
+   border: 2px solid #14B71C;
+   border-radius: 5px;
+   padding: 5px;
+   font-family: Lato;
+}
+
+.logo{
+   padding: 1em 1em .5em 1em;
+   width: 16em;
+}
+
+.header_map{
+   font-size: 1.3em;
+   width: 25%;
+}
+
+.header_map p{
+   text-align: center;
+   margin: 0;
+   padding: .3em 0;
+}
+
+/************************** Mobile Stuff *****************/
+
+/* Phone */
+@media only screen and (max-width: 500px) {
+
+   .header h1{
+      font-size: 10vw;
+      padding: 15vh 0 0 0;
+   }
+
+   .logo{
+      width: 12em;
+   }
+
+   .background_map{
+      background: url(../images/MBTA_Crop.png) 20% 40%;
+   }
+
+   .button_container{
+      position: fixed;
+      left: 80%;
+   }
+
+   .overlay {
+      left: 0;
+      width: 100%;
+      display: block;
+   }
+
+
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 501px) and (max-width: 1024px) {
+
+   .button_container{
+      position: fixed;
+   }
+
+}

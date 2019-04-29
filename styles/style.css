@@ -208,7 +208,7 @@ cursor: default;
    transition: opacity 500ms;
    visibility: hidden;
    opacity: 0;
-   z-index: 10;
+   z-index: 1000; /* Make it above the hamburger nav */
 }
 .overlay_pop:target {
    visibility: visible;
@@ -239,7 +239,7 @@ cursor: default;
 .popup-imgs{
    display: grid;
    width: 95%;
-   grid-template-columns: repeat(2, 45%);
+   grid-template-columns: repeat(1, 45%);
    grid-template-rows: repeat(auto);
    justify-items: center; /* Horizontal */
    align-items: center; /* Vertical */
@@ -262,7 +262,7 @@ cursor: default;
 /* Original Source: https://codepen.io/PaulVanO/pen/XJYGNQ */
 
 .button_container {
-   position: fixed;
+   position: relative;
    top: 2.5em;
    left: 90%;
    height: 2.3em;
@@ -273,6 +273,10 @@ cursor: default;
 
 .button_container:hover {
    opacity: 0.8;
+}
+
+.button_container.active{
+   position: fixed;
 }
 
 .button_container.active .top {
@@ -427,6 +431,7 @@ nav{
       left: 0;
    }
 }
+
 
 /************************** Mobile Stuff *****************/
 
