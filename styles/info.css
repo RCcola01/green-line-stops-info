@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6{
    width: 100%;
    background: url(../images/MBTA_Crop.png) 100% 10%;
    object-fit: fill;
-   opacity: .30;
+   opacity: .35;
    position: absolute;
    z-index: -1;
    top: 0;
@@ -80,22 +80,6 @@ button{
    font-weight: bold; 
 }
 
-.button_2{
-   background-color: #00009C; 
-}
-
-.green-1{
-   background-color: #0C8A16;
-}
-
-.green-2{
-   background-color: #14B71C;
-}
-
-.green-3{
-   background-color: #169A66;
-}
-
 .instructions-title{
    text-align: center;
    color: #FFF;
@@ -131,11 +115,7 @@ ellipse:hover {
    fill: lightgrey;
    cursor: pointer;
 }
-/* #path67 {
-fill: none !important;
-stroke: #A9A9A9 !important;
-cursor: default;
-} */
+
 #info-box {
    display: none;
    position: absolute;
@@ -170,6 +150,12 @@ footer{
    justify-content: center;
    color: #FFF;
    background-color: #0C8A16;
+}
+
+.header2{
+  max-width: 100%;
+  margin: -10em 2em 2em;
+  text-align: center;
 }
 
 /************************** Mobile Stuff *****************/
