@@ -8,22 +8,30 @@
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body class="border">
+<div id="info-box"></div>
+
 <div class="header">
        <div class="background_map"></div>
        <h1>Green Line Stop Info</h1>
-       <h2> Taco Mode </h2>
+       <h2> Time Saving Mode </h2>
 </div>
-<div id="info-box"></div>
+
+<label class="switch"> 
+	<p>Track total time saved</p>
+  <input type="checkbox" id="total-toggle">
+  <span class="slider round"></span>
+</label>
+
 <div class="time-save-form">
 	<h2 class="time-save-form" id="header"> By eliminating STOP you would save</h2>
 	<p>  </p>
 	<p class="time-save-form" id="min-sec"> <b>0</b> m <b>0</b> s</p>
+
+	<p class="time-save-form" id="time-save-total" style="display:none"> Total Time Saved: </p>
+	<button class=class="time-save-form" id="reset"> Start Over </button>
 </div>  
 
-<div class="time-save-box">
-	<p class="running-total"></p>
-	<button type="reset">Start Over</button>
-</div>
+
    
    <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -73,23 +81,8 @@
    
    
 
-   <div id="Boylston_Stop" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a> 
-                    <div>
-<!--
-                        <div class="popup-imgs">
-                        </div>
--->
+   
 
-                        <p> This is the Boylston line. It's pretty neat, my dude! Pretend there's an image of it above, too! </p>
-                    </div>
-                </div>
-            </div>
-
-	<div class="buttons">
-		<button onclick="window.location.href='index.html'">Back to Home</button>
-   </div>
        
    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
    <script type="text/javascript" src="stopData.json"></script>
