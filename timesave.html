@@ -5,15 +5,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>B-Line Info</title>
 <link rel="stylesheet" type="text/css" href="styles/timeSaveStyle.css" />
+<link rel="stylesheet" type="text/css" href="styles/style.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
-<body class="border">
+<body>
+    <div class="header">
+         <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+         </div>
+           <div class="background_map"></div>
+           <h1>Time Saving Mode</h1>
 
-<div class="header">
-       <div class="background_map"></div>
-       <h1>Green Line Stop Info</h1>
-       <h2> Time Saving Mode </h2>
-</div>
+           <a href="index.html"> <img src="images/logoThing.png" class="logo"> </a>
+    </div>
+
+      <main>
+
+         <!-- Hamburger Nav - Start -->
+         <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+               <ul>
+                  <li>
+                     <a href="index.html">
+                        <section class="">
+                           <p class="bold">Home</p>
+                        </section>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="InfoMode.html">
+                        <section class="">
+                           <p class="bold">Info Mode</p>
+                        </section>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="tacomode.html">
+                        <section class="">
+                           <p class="bold">Taco Mode</p>
+                        </section>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="timesave.html">
+                        <section class="">
+                           <p class="bold">Time Saving Mode</p>
+                        </section>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <!-- Ham Nav - End-->
+
+     </main>
 
 <p id="instruction-box">Click on each stop to see how much time you would save if the stop were to be eliminated. Toggle the "Track Total Time Saved" switch to see how much time you can save altogether</p>
 
@@ -96,6 +143,7 @@
        
    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
    <script type="text/javascript" src="stopData.json"></script>
+   <script src="ham.js"></script>
    <script src="main.js"></script>
 </body>
 </html>

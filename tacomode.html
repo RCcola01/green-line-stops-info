@@ -5,14 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>B-Line Info</title>
 <link rel="stylesheet" type="text/css" href="styles/tacomode.css" />
+<link rel="stylesheet" type="text/css" href="styles/style.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
-<body class="border">
-<div class="header">
-       <div class="background_map"></div>
-       <h1>Green Line Stop Info</h1>
-       <h2> Taco Mode </h2>
-</div>
+<body>
+    <div class="header">
+         <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+         </div>
+           <div class="background_map"></div>
+           <h1>Taco Mode</h1>
+
+           <a href="index.html"> <img src="images/logoThing.png" class="logo"> </a>
+    </div>
+
+      <main>
+
+
+
+         <!-- Hamburger Nav - Start -->
+         <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+               <ul>
+                  <li>
+                     <a href="index.html">
+                        <section class="">
+                           <p class="bold">Home</p>
+                        </section>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="InfoMode.html">
+                        <section class="">
+                           <p class="bold">Info Mode</p>
+                        </section>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="tacomode.html">
+                        <section class="">
+                           <p class="bold">Taco Mode</p>
+                        </section>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="timesave.html">
+                        <section class="">
+                           <p class="bold">Time Saving Mode</p>
+                        </section>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <!-- Ham Nav - End-->
+     </main>
 <div id="info-box"></div>
 
 
@@ -330,11 +379,10 @@
 		<p id = "tacomode-intro">Welcome to Taco Mode! Are you hungry? Do you need your pico de gallo and sour cream fix? Hover over a stop to see how many restaurants serve tacos in the immediate vicinity of each B line stop. Clicking on a stop reveals more details about the taco spots in the area.</p>
 </div>
 
-	<div class="buttons">
-		<button onclick="window.location.href='index.html'">Back to Home</button>
-   </div>
+
        
    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+   <script src="ham.js"></script>
    <script src="main.js"></script>
 </body>
 </html>
