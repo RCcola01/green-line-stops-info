@@ -208,7 +208,7 @@ cursor: default;
    transition: opacity 500ms;
    visibility: hidden;
    opacity: 0;
-   z-index: 10;
+   z-index: 1000; /* Make it above the hamburger nav */
 }
 .overlay_pop:target {
    visibility: visible;
@@ -447,7 +447,6 @@ nav{
    }
 
    .button_container{
-      position: fixed;
       left: 80%;
    }
 
@@ -464,8 +463,6 @@ nav{
 /* Tablet */
 @media only screen and (min-width: 501px) and (max-width: 1024px) {
 
-   .button_container{
-      position: fixed;
-   }
+
 
 }
