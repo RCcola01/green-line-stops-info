@@ -150,7 +150,7 @@ cursor: default;
 }
 
 .logo{
-   padding: 1em 1em .5em 1em;
+   padding: 0 1em .5em 1em;
    width: 16em;
 }
 
@@ -163,6 +163,13 @@ cursor: default;
    text-align: center;
    margin: 0;
    padding: .3em 0;
+}
+
+footer{
+   display: flex;
+   justify-content: center;
+   color: #FFF;
+   background-color: #0C8A16;
 }
 
 /* Border around the screen*/ 
