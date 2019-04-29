@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>B-Line Info Mode</title>
       <link rel="stylesheet" type="text/css" href="styles/style.css" />
+      <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
    </head>
    <body>
@@ -14,17 +15,11 @@
             <span class="middle"></span>
             <span class="bottom"></span>
          </div>
-         
+
          <a href="index.html"> <img src="images/logoThing.png" class="logo"> </a>
       </header>
 
       <main>
-
-         <div class="left"></div>
-         <div class="right"></div>
-         <div class="top"></div>
-         <div class="bottom"></div>
-
          <!-- Hamburger Nav - Start -->
          <div class="overlay" id="overlay">
             <nav class="overlay-menu">
@@ -80,47 +75,330 @@
                                     c2.2,0.2,4.5-0.5,6.2-2.2l63.2-63.2C764.4,317,764.4,311.8,761.1,308.8z"/>
             </g>
             <g id="Stops">
-               <circle id="Park_St" data-info="<div>Boston College</div>" data-name="Boston College" class="st1" cx="36.87" cy="380.59" r="5.82"/>
-               <circle id="Hynes" data-info="<div>Hynes Convention Center</div>" class="st1" cx="512.7" cy="378" r="5.7"/>
+               <a href="#BC_Stop">
+                  <circle id="BC" data-info="<div>Boston College</div>" data-name="Boston College" class="st1" cx="36.87" cy="380.59" r="5.82"/>
+               </a>
+               <a href="#Hynes_Stop">
+                  <circle id="Hynes" data-info="<div>Hynes Convention Center</div>" class="st1" cx="512.7" cy="378" r="5.7"/>
+               </a>
                <a href="#Kenmore_Stop">
                   <circle id="Kenmore_Sq" data-info="<div>Kenmore Square</div>" class="st1" cx="451" cy="378" r="5.7"/>
                </a>
-               <circle id="Blandford_St" data-info="<div>Blandford Street</div>" class="st1" cx="416.5" cy="357.8" r="5.7"/>
-               <circle id="BU_East" data-info="<div>Boston University East </div>" class="st1" cx="397.8" cy="339.3" r="5.7"/>
-               <circle id="BU_Central" data-info="<div>Boston University Central</div>" class="st1" cx="376.3" cy="317.5" r="5.7"/>
-               <circle id="BU_West" data-info="<div>Boston University West</div>" class="st1" cx="357.8" cy="299.3" r="5.7"/>
-               <circle id="Saint_Paul_St" data-info="<div>Saint Paul Street</div>" class="st1" cx="336.1" cy="277.5" r="5.7"/>
-               <circle id="Pleasant_St" data-info="<div>Pleasant Street</div>" class="st1" cx="317.3" cy="258.8" r="5.7"/>
-               <circle id="Babcock_St" data-info="<div>Babcock Street</div>" class="st1" cx="296.3" cy="237.8" r="5.7"/>
-               <circle id="Packards_Corner" data-info="<div>Packard's Corner</div>" class="st1" cx="276.6" cy="218.1" r="5.7"/>
-               <circle id="Harvard_Ave" data-info="<div>Harvard Avenue</div>" class="st1" cx="245.1" cy="206.3" r="5.7"/>
-               <circle id="Griggs_St" data-info="<div>Griggs Street</div>" class="st1" cx="210.1" cy="220.3" r="5.7"/>
-               <circle id="Allston_St" data-info="<div>Allston Street</div>" class="st1" cx="189.9" cy="240.6" r="5.7"/>
-               <circle id="Warren_St" data-info="<div>Warren Street</div>" class="st1" cx="169.4" cy="260.8" r="5.7"/>
-               <circle id="Washington_St" data-info="<div>Washington Street</div>" class="st1" cx="149.1" cy="280.8" r="5.7"/>
-               <circle id="Sutherland_Rd" data-info="<div>Sutherland Road</div>" class="st1" cx="128.9" cy="301" r="5.7"/>
-               <ellipse id="Chiswick_Rd" data-info="<div>Chiswick Road</div>" transform="matrix(0.9951 -9.853745e-02 9.853745e-02 0.9951 -31.1292 12.2699)" class="st1" cx="108.7" cy="321.3" rx="5.7" ry="5.7"/>
-               <circle id="Chestnut_Hill_Ave" data-info="<div>Chestnut Hill Avenue</div>" class="st1" cx="88.7" cy="342.5" r="5.7"/>
-               <circle id="South_St" data-info="<div>South Street</div>" class="st1" cx="68.7" cy="362.8" r="5.7"/>
-               <circle id="Copley" data-info="<div>Copley</div>" class="st1" cx="572" cy="378" r="5.7"/>
-               <circle id="Arlington" data-info="<div>Arlington</div>" class="st1" cx="631.2" cy="378" r="5.7"/>
-               <circle id="Park_St" data-info="<div>Park Street</div>" class="st1" cx="384.6" cy="258.3" r="2.3"/>
+               <a href="#Blandford_St_Stop">
+                  <circle id="Blandford_St" data-info="<div>Blandford Street</div>" class="st1" cx="416.5" cy="357.8" r="5.7"/>
+               </a>
+               <a href="#BU_East_Stop">
+                  <circle id="BU_East" data-info="<div>Boston University East </div>" class="st1" cx="397.8" cy="339.3" r="5.7"/>
+               </a>
+               <a href="#BU_Central_Stop">
+                  <circle id="BU_Central" data-info="<div>Boston University Central</div>" class="st1" cx="376.3" cy="317.5" r="5.7"/>
+               </a>
+               <a href="#BU_West_Stop">
+                  <circle id="BU_West" data-info="<div>Boston University West</div>" class="st1" cx="357.8" cy="299.3" r="5.7"/>
+               </a>
+               <a href="#Saint_Paul_St_Stop">
+                  <circle id="Saint_Paul_St" data-info="<div>Saint Paul Street</div>" class="st1" cx="336.1" cy="277.5" r="5.7"/>
+               </a>
+               <a href="#Pleasant_St_Stop">
+                  <circle id="Pleasant_St" data-info="<div>Pleasant Street</div>" class="st1" cx="317.3" cy="258.8" r="5.7"/>
+               </a>
+               <a href="#Babcock_St_Stop">
+                  <circle id="Babcock_St" data-info="<div>Babcock Street</div>" class="st1" cx="296.3" cy="237.8" r="5.7"/>
+               </a>
+               <a href="#Packards_Corner_Stop">
+                  <circle id="Packards_Corner" data-info="<div>Packard's Corner</div>" class="st1" cx="276.6" cy="218.1" r="5.7"/>
+               </a>
+               <a href="#Harvard_Ave_Stop">
+                  <circle id="Harvard_Ave" data-info="<div>Harvard Avenue</div>" class="st1" cx="245.1" cy="206.3" r="5.7"/>
+               </a>
+               <a href="#Griggs_St_Stop">
+                  <circle id="Griggs_St" data-info="<div>Griggs Street</div>" class="st1" cx="210.1" cy="220.3" r="5.7"/>
+               </a>
+               <a href="#Allston_St_Stop">
+                  <circle id="Allston_St" data-info="<div>Allston Street</div>" class="st1" cx="189.9" cy="240.6" r="5.7"/>
+               </a>
+               <a href="#Warren_St_Stop">
+                  <circle id="Warren_St" data-info="<div>Warren Street</div>" class="st1" cx="169.4" cy="260.8" r="5.7"/>
+               </a>
+               <a href="#Washington_St_Stop">
+                  <circle id="Washington_St" data-info="<div>Washington Street</div>" class="st1" cx="149.1" cy="280.8" r="5.7"/>
+               </a>
+               <a href="#Sutherland_Rd_Stop">
+                  <circle id="Sutherland_Rd" data-info="<div>Sutherland Road</div>" class="st1" cx="128.9" cy="301" r="5.7"/>
+               </a>
+               <a href="#Chiswick_Rd_Stop">
+                  <ellipse id="Chiswick_Rd" data-info="<div>Chiswick Road</div>" transform="matrix(0.9951 -9.853745e-02 9.853745e-02 0.9951 -31.1292 12.2699)" class="st1" cx="108.7" cy="321.3" rx="5.7" ry="5.7"/>
+               </a>
+               <a href="#Chestnut_Hill_Ave_Stop">
+                  <circle id="Chestnut_Hill_Ave" data-info="<div>Chestnut Hill Avenue</div>" class="st1" cx="88.7" cy="342.5" r="5.7"/>
+               </a>
+               <a href="#South_St_Stop">
+                  <circle id="South_St" data-info="<div>South Street</div>" class="st1" cx="68.7" cy="362.8" r="5.7"/>
+               </a>
+               <a href="#Copley_Stop">
+                  <circle id="Copley" data-info="<div>Copley</div>" class="st1" cx="572" cy="378" r="5.7"/>
+               </a>
+               <a href="#Arlington_Stop">
+                  <circle id="Arlington" data-info="<div>Arlington</div>" class="st1" cx="631.2" cy="378" r="5.7"/>
+               </a>
                <a href="#Boylston_Stop">
                   <circle id="Boylston" data-info="<div>Boylston</div>" class="st1" cx="691.9" cy="376.8" r="5.7"/>
                </a>
-               <circle id="Park_St" data-info="<div>Park Street</div>" data-name="Park St" class="st1" cx="753.87" cy="315.59" r="5.82"/>
+               <a href="#Park_St_Stop">
+                  <circle id="Park_St" data-info="<div>Park Street</div>" data-name="Park St" class="st1" cx="753.87" cy="315.59" r="5.82"/>
+               </a>
             </g>
          </svg>
+
+         <!----------- Popup Stuff ------------>
+
+         <div id="Washington_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/washingtonstreet..JPG" alt="Washington Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Copley_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/copley.jpg" alt="Copley Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!</p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Arlington_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/arlington.jpg" alt="Arlington Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude! </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="South_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/southstreet.jpg" alt="South Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Chestnut_Hill_Ave_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/chesnuthill.jpg" alt="Chestnut Hill Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Chiswick_Rd_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/chiswickroad.jpg" alt="Chiswick Road Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Sutherland_Rd_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/sutherland.jpg" alt="Sutherland Road Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Warren_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/warrenstreet.jpg" alt="Warren Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Allston_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/allstonstreet.JPG" alt="Allston Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Griggs_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/griggsstreet.jpg" alt="Griggs Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Harvard_Ave_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/harvardave.JPG" alt="Harvard Ave Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Packards_Corner_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/packardscorner.JPG" alt="Packards Corner Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Babcock_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/babcockstreet.JPG" alt="Babcock Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Pleasant_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/plesantstreet.JPG" alt="Pleasant Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Saint_Paul_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/saintpaul.JPG" alt="Saint Paul Street Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="BU_West_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/buwest.jpg" alt="BU West Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="BU_Central_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/bucentral.jpg" alt="BU Central Stop">
+                  </div>
+                  <p> This is the BU West stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="BC_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/bostoncollege.jpg" alt="BC Stop">
+                  </div>
+                  <p> This is the Boston College stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Blandford_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/blandfordstreet.jpg" alt="Blandford Street Stop">
+                  </div>
+                  <p> This is the Blandford stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="BU_East_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/bueast.jpg" alt="BU East Stop">
+                  </div>
+                  <p> This is the BU East stop. It's pretty neat, my dude!  </p>
+               </div>
+            </div>
+         </div>
 
          <div id="Boylston_Stop" class="overlay_pop">
             <div class="popup">
                <a class="close" href="#">&times;</a> 
                <div>
-
                   <div class="popup-imgs">
-                     <img src="images/stops/boylston.jpg">
+                     <img src="images/stops/boylston.jpg" alt="Boylston Stop">
                   </div>
-
                   <p> This is the Boylston stop. It's pretty neat, my dude!  </p>
                </div>
             </div>
@@ -130,21 +408,41 @@
             <div class="popup">
                <a class="close" href="#">&times;</a> 
                <div>
-
                   <div class="popup-imgs">
-                     <img src="images/stops/kenmore.jpg"> 
+                     <img src="images/stops/kenmore.jpg" alt="Kenmore Stop"> 
                   </div>
-
                   <p> This is the Kenmore stop. It's pretty neat, my dude! </p>
                </div>
             </div>
          </div>
+
+         <div id="Park_St_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/parkstreet.jpg" alt="Park Street Stop"> 
+                  </div>
+                  <p> This is the Park Street stop. It's pretty neat, my dude! </p>
+               </div>
+            </div>
+         </div>
+
+         <div id="Hynes_Stop" class="overlay_pop">
+            <div class="popup">
+               <a class="close" href="#">&times;</a> 
+               <div>
+                  <div class="popup-imgs">
+                     <img src="images/stops/hynes.jpg" alt="Hynes Convention Center Stop"> 
+                  </div>
+                  <p> This is the Hynes Convention Center stop. It's pretty neat, my dude! </p>
+               </div>
+            </div>
+         </div>
+
       </main>
-      
-      <footer>
-         <p> Created By: Rachel Chmielinski, Rhonda Mak, &amp; Brandon Chen</p>
-      </footer>
-      
+
+
 
       <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
       <script src="main.js"></script>
