@@ -17,18 +17,29 @@ h1, h2, h3, h4, h5, h6{
 
 .header{
 	width: 100%;
-	height: 50vh;
-	display: flex;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
     position: relative;
     top: 0;
 }
-
+#instruction-box{
+  margin: 2em;
+  margin-bottom: -10em;
+  font-size: 1.3em;
+}
 .header h1{
-	color: rgba(0,0,0,1);
-    padding: 5vh 0 0 0;
+  color: rgba(0,0,0,1);
+    padding: 12vh 0 0 0;
+    margin: 0;
     font-size: 6vw;
     text-align: center;
     width: 100%;
+}
+.header h2{
+  text-align: center;
+  margin: 0;
+  font-size: 4vw;
 }
 
 
@@ -53,6 +64,11 @@ p{
 a{
    text-decoration: none;
    color: #000;
+   color: #14B71C;
+}
+a:hover{
+  text-decoration: none;
+   color: #FF962A;
 }
 
 .intro{
@@ -150,23 +166,50 @@ ellipse:hover {
    border: 10px #0C8A16 solid;
 }
 
-.time-save-form {
-  position: relative;
+.time-save-display {
+
   text-align: center;
   height: 0px;
   font-family: Lato;
-  font-size: 1em;
-  float: right;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+/*  margin: 2em;
   top: 8em;
   margin-right: 7em;
+*/
 
+}
+
+#header{
+  text-align: left;
+}
+
+.grid-container{
+  float: right;
+  margin-right: 12em;
+  display: grid;
+  grid-template-columns: 15em 3em;
+  grid-column-gap: 5em;
+  position: relative;
+  top: 18em;
+}
+
+.time-save-display {
+
+  text-align:left ;
+  height: 0px;
+  font-family: Lato;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+/*  margin: 2em;
+  top: 8em;
+  margin-right: 7em;
+*/
 
 }
 
 #min-sec{
-  position: relative;
-  
-
+  margin-top: 3em;
 }
 
 
@@ -175,6 +218,7 @@ ellipse:hover {
 /*** Slider code taken and modified from https://www.w3schools.com/howto/howto_css_switch.asp (sorry) ****/
 /* The switch - the box around the slider */
 .switch {
+  margin-left: 3em;
   position: relative;
   display: inline-block;
   width: 60px;
@@ -238,8 +282,30 @@ input:checked + .slider:before {
  
 /****End Slider Styles****/
 
+.toggle-switch{
+  float:right;
+  margin-bottom: 0px;
+
+/*  margin-right: 4em;
+  position: relative;
+  top: 18em;*/
+}
+
+#toggle-title{
+  width: 200px;
+}
 
 
+
+#reset{
+  width: 100px;
+  height: 34px;
+  margin: 2em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+  margin-left: 2.7em;
+
+}
 
 /* Original Source: https://codepen.io/anon/pen/EGvKZW */
 /****************   Overlay   ******************/
@@ -301,29 +367,84 @@ input:checked + .slider:before {
     padding: 0 5% 0 2%;
 }
 
+svg{
+  margin: -7em 0 3em;
+}
+
 /************************************/
-
-
 /* Mobile */
 @media only screen and (max-width: 500px) {
-
    .header h1{
       font-size: 10vw;
       padding: 15vh 0 0 0;
    }
-   
+
    .background_map{
       background: url(../images/MBTA_Crop.png) 20% 40%;
+      height: 40vh;
    }
-   
+
+svg{
+    margin: -5em 0 3em;
+   }
+   .buttons{
+      margin: -1.5em 0 1em;
+   }   
 }
 
-/* Mobile */
+@media only screen and (max-width: 500px) {
+   .header h1{
+      font-size: 10vw;
+      padding: 15vh 0 0 0;
+   }
+
+   .background_map{
+      background: url(../images/MBTA_Crop.png) 20% 40%;
+      height: 40vh;
+   }
+
+
+/* web */
 @media only screen and (min-width: 501px) and (max-width: 1024px) {
+  .header h1{
+      font-size: 10vw;
+      padding: 15vh 0 0 0;
+   }
 
+   .header h2{
+    font-size: 6vw;
+    margin: -0.5em 0 -1em;
+   }
+
+   svg{
+    margin: -10em 0em 2em;
+   }
+
+   .background_map{
+      height: 40vh;
+   }
 
 }
 
+@media only screen and (min-width: 1025px) {
+  .header h1{
+      font-size: 10vw;
+   }
+
+   .header h2{
+    font-size: 6vw;
+    margin: -0.5em 0 -1em;
+   }
+
+   svg{
+    margin: -15em 0em -10em;
+   }
+
+   .background_map{
+      height: 52vh;
+   }
+
+}
 
 
 
