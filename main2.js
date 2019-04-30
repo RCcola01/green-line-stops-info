@@ -1,7 +1,5 @@
-
-
-const stopData = { 
-  "Boston_College":{ 
+const stopData2 = { 
+  "Boston_College2":{ 
     "proper_name": "Boston College",
     "time_saved" : "0m 0s: This is the terminus",
     "time_stamp" : "0:00",
@@ -10,7 +8,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Hynes":{ 
+  "Hynes2":{ 
     "proper_name": "Hynes Convention Center",
     "time_saved" : "0m 52s",
     "time_stamp" : "0:52",
@@ -19,7 +17,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-    "Kenmore_Sq":{ 
+    "Kenmore_Sq2":{ 
       "proper_name": "Kenmore",
       "time_saved" : "1m 1s",
       "time_stamp" : "1:01",
@@ -28,7 +26,7 @@ const stopData = {
       "nearbyTacos": "",
   },
 
-  "Blandford_St":{ 
+  "Blandford_St2":{ 
     "proper_name": "Blandford Street",
     "time_saved" : "0m 50s",
     "time_stamp" : "0:50",
@@ -37,7 +35,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "BU_East":{ 
+  "BU_East2":{ 
     "proper_name": "Boston University East",
     "time_saved" : "0m 54s",
     "time_stamp" : "0:54",
@@ -46,7 +44,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "BU_Central":{ 
+  "BU_Central2":{ 
     "proper_name": "Boston University Central",
     "time_saved" : "0m 49s",
     "time_stamp" : "0:49",
@@ -55,7 +53,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "BU_West":{ 
+  "BU_West2":{ 
     "proper_name": "Boston University West",
     "time_saved" : "0m 43s",
     "time_stamp" : "0:43",
@@ -64,7 +62,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Saint_Paul_St":{ 
+  "Saint_Paul_St2":{ 
     "proper_name": "Saint Paul Street",
     "time_saved" : "0m 43s",
     "time_stamp" : "0:43",
@@ -73,7 +71,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Pleasant_St":{ 
+  "Pleasant_St2":{ 
     "proper_name": "Pleasant Street",
     "time_saved" : "0m 48s",
     "time_stamp" : "0:48",
@@ -82,7 +80,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Babcock_St":{
+  "Babcock_St2":{
     "proper_name": "Babcock Street", 
     "time_saved" : "0m 47s",
     "time_stamp" : "0:47",
@@ -91,7 +89,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Packards_Corner":{ 
+  "Packards_Corner2":{ 
     "proper_name": "Packards Corner",
     "time_saved" : "0m 56s",
     "time_stamp" : "0:56",
@@ -100,7 +98,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Harvard_Ave":{ 
+  "Harvard_Ave2":{ 
     "proper_name": "Harvard Avenue",
     "time_saved" : "0m 50s",
     "time_stamp" : "0:50",
@@ -109,7 +107,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Griggs_St":{ 
+  "Griggs_St2":{ 
     "proper_name": "Griggs Street",
     "time_saved" : "0m 47s",
     "time_stamp" : "0:47",
@@ -118,7 +116,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Allston_St":{ 
+  "Allston_St2":{ 
     "proper_name": "Allston Street",
     "time_saved" : "0m 50s",
     "time_stamp" : "0:50",
@@ -127,7 +125,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Warren_St":{ 
+  "Warren_St2":{ 
     "proper_name": "Warren Street",
     "time_saved" : "0m 40s",
     "time_stamp" : "0:40",
@@ -136,7 +134,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Washington_St":{ 
+  "Washington_St2":{ 
     "proper_name": "Washington Street",
     "time_saved" : "0m 39s",
     "time_stamp" : "0:39",
@@ -145,7 +143,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Sutherland_Rd":{ 
+  "Sutherland_Rd2":{ 
     "proper_name": "Sutherland Road",
     "time_saved" : "0m 49s",
     "time_stamp" : "0:49",
@@ -154,7 +152,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Chiswick_Rd":{ 
+  "Chiswick_Rd2":{ 
     "proper_name": "Chiswick Road",
     "time_saved" : "0m 48s",
     "time_stamp" : "0:48",
@@ -163,7 +161,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Chestnut_Hill_Ave":{ 
+  "Chestnut_Hill_Ave2":{ 
     "proper_name": "Chestnut Hill Avenue",
     "time_saved" : "0m 40s",
     "time_stamp" : "0:40",
@@ -172,7 +170,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "South_St":{ 
+  "South_St2":{ 
     "proper_name": "South Street",
     "time_saved" : "0m 40s",
     "time_stamp" : "0:40",
@@ -181,7 +179,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Copley":{ 
+  "Copley2":{ 
     "proper_name": "Copley",
     "time_saved" : "0m 54s",
     "time_stamp" : "0:54",
@@ -190,7 +188,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Arlington":{ 
+  "Arlington2":{ 
     "proper_name": "Arlington",
     "time_saved" : "0m 54s",
     "time_stamp" : "0:54",
@@ -199,7 +197,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Boylston":{ 
+  "Boylston2":{ 
     "proper_name": "Boylston",
     "time_saved" : "0m 50s",
     "time_stamp" : "0:50",
@@ -208,7 +206,7 @@ const stopData = {
     "nearbyTacos": "",
   },
 
-  "Park_St":{ 
+  "Park_St2":{ 
     "proper_name": "Park Street",
     "time_saved" : "0m 0s: This is the terminus",
     "time_stamp" : "0:00",
@@ -229,8 +227,8 @@ var timeHeader = document.getElementById('header');
 var timeVal = document.getElementById('min-sec');
 var totalTime = document.getElementById('time-save-total');
 var totalToggle = document.getElementById('total-toggle');
-const classname = document.getElementsByClassName("st1");
-const startOver = document.getElementById('reset');
+const classname2 = document.getElementsByClassName("stop-button");
+const startOver2 = document.getElementById('reset');
 var visitedStops = [];
 var runningTotal = "0:00";
 //let mql = window.matchMedia('(max-width: 600px)');
@@ -239,15 +237,15 @@ var runningTotal = "0:00";
 
 // Event Listeners
 
-for (var i = 0; i < classname.length; i++) {
-    let idVar = classname[i].id;
-    classname[i].addEventListener('click', function(){
+for (var i = 0; i < classname2.length; i++) {
+    let idVar = classname2[i].id;
+    classname2[i].addEventListener('click', function(){
       updateTime(idVar);
     });
 }
 
 totalToggle.addEventListener('click', showRunningTotal);
-startOver.addEventListener('click', function(){
+startOver2.addEventListener('click', function(){
   runningTotal = "0:00";
   for (var j = 0; j < visitedStops.length; j++ ){
     visitedStops[j].style.fill = '';
@@ -264,9 +262,9 @@ function showRunningTotal(){
   runningTotal = "0:00";
   if(totalToggle.checked){
     totalTime.style.display = "block";
-    for (var i = 0; i < classname.length; i++) {
-      let idVar = classname[i].id;
-      classname[i].addEventListener('click', function(){
+    for (var i = 0; i < classname2.length; i++) {
+      let idVar = classname2[i].id;
+      classname2[i].addEventListener('click', function(){
         updateRunningTotal(idVar);
         updateTime(idVar);
       });
@@ -280,7 +278,7 @@ function showRunningTotal(){
 
 function updateRunningTotal(stopName){
   stopName.toString();
-  timeStamp = stopData[stopName].time_stamp;
+  timeStamp = stopData2[stopName].time_stamp;
   var visitedStop = document.getElementById(stopName);
   if (visitedStop.style.fill == "grey"){
     visitedStop.style.fill = "";
@@ -303,8 +301,8 @@ var updateTime = function(stopName) {
     //alert(stopName.toString());
     stopName.toString();
     console.log(stopName);
-    stopDisplayName = stopData[stopName].proper_name;
-    let timeSaved = stopData[stopName].time_saved;
+    stopDisplayName = stopData2[stopName].proper_name;
+    let timeSaved = stopData2[stopName].time_saved;
     timeHeader.innerHTML = 'Eliminating ' + stopDisplayName + ' Saves:';
     timeVal.innerHTML = timeSaved;
 };

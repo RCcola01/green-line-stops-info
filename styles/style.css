@@ -1,14 +1,14 @@
 @font-face{
-   font-family: bebasNeue;
-   src: url(../fonts/BebasNeue-Regular.otf);
+  font-family: bebasNeue;
+  src: url(../fonts/BebasNeue-Regular.otf);
 }
 
 html{
-   box-sizing: border-box;
+	box-sizing: border-box;
 
 }
 *, *:before, *:after{
-   box-sizing: inherit;
+  	box-sizing: inherit;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -16,21 +16,30 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .header{
-   width: 100%;
-   height: 50vh;
-   display: flex;
+	width: 100%;
+  height: 50vh;
+  display: flex;
   flex-direction: column;
     position: relative;
     top: 0;
 }
-
+#instruction-box{
+  margin: 2em;
+  margin-bottom: -10em;
+  font-size: 1.3em;
+}
 .header h1{
-   color: rgba(0,0,0,1);
-   padding: 13vh 0 0 0;
-   font-size: 7vw;
-   text-align: center;
-   width: 100%;
-   letter-spacing: 4px;
+  color: rgba(0,0,0,1);
+    padding: 12vh 0 0 0;
+    margin: 0;
+    font-size: 6vw;
+    text-align: center;
+    width: 100%;
+}
+.header h2{
+  text-align: center;
+  margin: 0;
+  font-size: 4vw;
 }
 
 
@@ -39,13 +48,13 @@ h1, h2, h3, h4, h5, h6{
    width: 100%;
    background: url(../images/MBTA_Crop.png) 100% 10%;
    object-fit: fill;
-   opacity: .30;
+   opacity: .35;
    position: absolute;
-   z-index: -1;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 p{
@@ -54,6 +63,7 @@ p{
 
 a{
    text-decoration: none;
+   color: #000;
    color: #14B71C;
 }
 a:hover{
@@ -62,43 +72,33 @@ a:hover{
 }
 
 .intro{
-   text-align: center;
-   margin: 60px 10% 0 10%;
+	text-align: center;
+	margin: 60px 10% 0 10%;
 }
 
 .buttons{
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   margin-top: 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 60px;
 }
 
 button{
-   background-color: #14B71C;
-   color: white;
-   border-radius: 15px;
-   border: 0px;
-   height: 5em;
-   width: 18em;
-   margin: 10px;
-   box-shadow: 6px 6px 0px #555;
-   font-weight: bold; 
+	background-color: #14B71C;
+	color: white;
+	border-radius: 15px;
+    border: 0px;
+	height: 5em;
+	width: 18em;
+	margin: 10px;
+	box-shadow: 6px 6px 0px #555;
+    font-weight: bold; 
 }
 
-.button_2{
-   background-color: #00009C; 
-}
+
 
 .green-1{
    background-color: #0C8A16;
-}
-
-.green-2{
-   background-color: #14B71C;
-}
-
-.green-3{
-   background-color: #169A66;
 }
 
 .instructions-title{
@@ -121,327 +121,436 @@ button{
    justify-content: center;
 }
 
+
+
+/*.st1:hover {
+    fill: #a9a9a9;
+    opacity: 0.6;
+  }
+*/
 circle:hover {
-   stroke: lightgrey;
-   stroke-width:2px;
-   stroke-linejoin: round;
-   fill: lightgrey;
-   cursor: pointer;
+  stroke: lightgrey;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: lightgrey;
+  cursor: pointer;
 }
 
 ellipse:hover {
-   stroke: lightgrey;
-   stroke-width:2px;
-   stroke-linejoin: round;
-   fill: lightgrey;
-   cursor: pointer;
+  stroke: lightgrey;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: lightgrey;
+  cursor: pointer;
 }
 /* #path67 {
-fill: none !important;
-stroke: #A9A9A9 !important;
-cursor: default;
+  fill: none !important;
+  stroke: #A9A9A9 !important;
+  cursor: default;
 } */
 #info-box {
-   display: none;
-   position: absolute;
-   top: 0px;
-   left: 0px;
-   z-index: 1;
-   background-color: #ffffff;
-   border: 2px solid #14B71C;
-   border-radius: 5px;
-   padding: 5px;
-   font-family: Lato;
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: #ffffff;
+  border: 2px solid #14B71C;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: Lato;
 }
 
-.logo{
-   position: absolute;
-   top:0;
-   padding: 1em 1em .5em 1em;
-   width: 16em;
-   margin-bottom: 3em;
-}
-
-.header_map{
-   font-size: 1.3em;
-   width: 25%;
-}
-
-.header_map p{
-   text-align: center;
+/*.border{
    margin: 0;
-   padding: .3em 0;
+   border: 10px #0C8A16 solid;
+}*/
+
+/***** START CSS FOR TIMESAVE *********/
+.time-save-display {
+
+  text-align: center;
+  height: 0px;
+  font-family: Lato;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+/*  margin: 2em;
+  top: 8em;
+  margin-right: 7em;
+*/
+
+}
+
+#header{
+  text-align: left;
+}
+
+.grid-container{
+  float: right;
+  margin-right: 12em;
+  display: grid;
+  grid-template-columns: 15em 3em;
+  grid-column-gap: 15px;
+  position: relative;
+  top: 18em;
+}
+
+.time-save-display {
+
+  text-align:left ;
+  height: 0px;
+  font-family: Lato;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+/*  margin: 2em;
+  top: 8em;
+  margin-right: 7em;
+*/
+
+}
+
+#min-sec{
+  margin-top: 3.5em;
 }
 
 
+
+
+/*** Slider code taken and modified from https://www.w3schools.com/howto/howto_css_switch.asp (sorry) ****/
+/* The switch - the box around the slider */
+.switch {
+  margin-left: 3em;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #14B71C;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #14B71C;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+ 
+/****End Slider Styles****/
+
+.toggle-switch{
+  float:right;
+  margin-bottom: 0px;
+
+/*  margin-right: 4em;
+  position: relative;
+  top: 18em;*/
+}
+
+#toggle-title{
+  width: 200px;
+}
+
+
+
+#reset{
+  width: 100px;
+  height: 34px;
+  margin: 2em;
+  margin-top: 1em;
+  margin-bottom: 0px;
+  margin-left: 2.7em;
+
+}
+
+/******** END CSS FOR TIMESAVE **********/
 
 /* Original Source: https://codepen.io/anon/pen/EGvKZW */
-/****************   Popup Overlay   ******************/
-
-.overlay_pop{
-   position: fixed;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   background: rgba(0, 0, 0, 0.7);
-   transition: opacity 500ms;
-   visibility: hidden;
-   opacity: 0;
-   z-index: 1000;
+/****************   Overlay   ******************/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
 }
-.overlay_pop:target {
-   visibility: visible;
-   opacity: 1;
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
 }
 
 .popup {
-   margin: 30px auto;
-   padding: 20px;
-   background: #fff;
-   border-radius: 10px;
-   width: 95%;
-   position: relative;
-   transition: all 5s ease-in-out;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    width: 95%;
+    position: relative;
+    transition: all 5s ease-in-out;
 }
 
 .popup .close {
-   position: absolute;
-   top: 20px;
-   right: 15px;
-   transition: all 200ms;
-   font-size: 30px;
-   font-weight: bold;
-   text-decoration: none;
-   color: #333;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
 }
 
 .popup-imgs{
-   display: grid;
-   width: 95%;
-   grid-template-columns: repeat(2, 45%);
-   grid-template-rows: repeat(auto);
-   justify-items: center; /* Horizontal */
-   align-items: center; /* Vertical */
-   justify-content: space-evenly;
-   margin-bottom: 1em;
+    display: grid;
+    width: 95%;
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: repeat(auto);
+    justify-items: center; /* Horizontal */
+    align-items: center; /* Vertical */
+    justify-content: space-evenly;
+    margin-bottom: 1em;
 }
 
 .popup-imgs img{
-   width: 100%;
-   max-height: 250px;
+    width: 100%;
+    max-height: 250px;
 }
 
 .popup div p{
-   padding: 0 5% 0 2%;
+    padding: 0 5% 0 2%;
 }
 
-
-
-/************************** Hamburger Nav ******************************/
-/* Original Source: https://codepen.io/PaulVanO/pen/XJYGNQ */
-
-.button_container {
-   position: absolute;
-   top: 2.5em;
-   left: 90%;
-   height: 2.3em;
-   width: 3em;
-   z-index: 100;
-   transition: opacity 0.25s ease;
+svg{
+  margin: -7em 0 3em;
 }
 
-.button_container:hover {
-   opacity: 0.8;
+.stop-menu{
+   margin: 0 10px 0 10px;
+  display: none;
 }
 
-.button_container.active .top {
-   transform: translateY(13px) translateX(0) rotate(45deg);
-   background: #FFF;
-}
-
-.button_container.active .middle {
-   opacity: 0;
-   background: #FFF;
-}
-
-.button_container.active .bottom {
-   transform: translateY(-13px) translateX(0) rotate(-45deg);
-   background: #FFF;
-}
-
-.button_container span {
-   background: #000;
-   border: none;
-   height: 7px;
-   width: 100%;
-   position: absolute;
-   top: 0;
-   left: 0;
-   transition: all 0.35s ease;
-   cursor: pointer;
-   -moz-border-radius: 20px;
-   -webkit-border-radius: 20px;
-   border-radius: 20px;
-}
-
-.button_container span:nth-of-type(2) {
-   top: 12.5px;
-}
-
-.button_container span:nth-of-type(3) {
-   top: 26.5px;
-}
-
-.overlay {
-   position: absolute;
-   background: #0C8A16;
-   top: 0;
-   left: 65%;
-   width: 35%;
-   height: 0%;
-   opacity: 0;
-   visibility: hidden;
-   transition: opacity 0.35s, visibility 0.35s, height 0.35s;
-   overflow: hidden;
-   z-index: 80;
-}
-
-.overlay.open {
-   opacity: 1;
-   visibility: visible;
-   height: 100%;
-}
-
-.overlay.open li {
-   animation: fadeInRight 0.5s ease forwards;
-   animation-delay: 0.35s;
-}
-
-.overlay.open li:nth-of-type(2) {
-   animation-delay: 0.4s;
-}
-
-.overlay.open li:nth-of-type(3) {
-   animation-delay: 0.45s;
-}
-
-.overlay.open li:nth-of-type(4) {
-   animation-delay: 0.5s;
-}
-
-.overlay nav {
-   position: relative;
-   height: 70%;
-   top: 45%;
-   transform: translateY(-50%);
-   font-size: 50px;
-   font-weight: 400;
-}
-
-.overlay ul {
-   list-style: none;
-   padding: 0;
-   margin: 0 auto;
-   display: inline-block;
-   position: relative;
-   height: 100%;
-   width: 100%;
-}
-
-.overlay ul li {
-   display: block;
-   height: 25%;
-   height: calc(100% / 4);
-   min-height: 45px;
-   position: relative;
-   opacity: 0;
-   float: none;
-}
-
-.overlay ul li a {
-   display: block;
-   position: relative;
-   color: #FFF;
-   text-decoration: none;
-   overflow: hidden;
-   font-size: 26px;
-   text-align: center;
-}
-
-.overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
-   width: 100%;
-}
-
-/* Using content="" creates an underline when hovered over */
-.overlay ul li a:after {
-   position: absolute;
-   bottom: 0;
-   left: 50%;
-   width: 0%;
-   transform: translateX(-50%);
-   height: 3px;
-   background: #FFF;
-   transition: 0.35s;
-}
-
-.overlay-menu{
-   background-color: #0C8A16;
-}
-
-nav{
-   box-shadow: none;
-}
-
-.overlay-menu a{
-   height: 100%;
-}
-
-@keyframes fadeInRight {
-   0% {
-      opacity: 0;
-      left: 20%;
-   }
-   100% {
-      opacity: 1;
-      left: 0;
-   }
-}
-
-/************************** Mobile Stuff *****************/
-
-/* Phone */
+/************************************/
+/* Mobile */
 @media only screen and (max-width: 500px) {
-
    .header h1{
       font-size: 10vw;
       padding: 15vh 0 0 0;
    }
 
-   .logo{
-      width: 12em;
-   }
-
    .background_map{
       background: url(../images/MBTA_Crop.png) 20% 40%;
+      height: 40vh;
    }
+   .buttons{
+      margin: -1.5em 0 1em;
+   }   
+}
 
-   .button_container{
-      position: absolute;
-      left: 80%;
-   }
+/***** START CSS FOR TIMESAVE *********/
 
-   .overlay {
-      left: 0;
-      width: 100%;
-      display: block;
-   }
+@media only screen and (max-width: 975px) {
+
+
+
+  .grid-container{
+    display:flex;
+    top: 30em;
+    width: 55%;
+    
+/*    float: right;
+    margin-right: 12em;
+    display: grid;
+    grid-template-columns: 20% 20%;
+    grid-column-gap: 20%;
+    position: relative;
+    top: 30em;*/
+
+  }
+
+  .time-save-display{
+    right: auto;
+    float: left;
+    margin-top:0;
+    margin-right: 2em;
+    top: 0;
+    width: auto;
+  }
+
+  .toggle-switch{
+    margin-top: 0;
+  }
+
 
 
 
 }
 
-/* Tablet */
+@media only screen and (max-width: 765px) {
+  .grid-container{
+    display: grid;
+    grid-template-columns: 13em;
+    grid-template-rows: 8em 8em;
+    top: 25em;
+  }
+
+  .stop-button{
+    background-color: #96e0c1;
+    color: black;
+    border-radius: 0px;
+    border: 0px;
+    height: 5em;
+    width: 100%;
+    margin: 5px;
+    box-shadow: none;
+    font-weight: bold; 
+  }
+
+  .instruction-box{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  svg{
+    display: none;
+   }
+
+  .time-save-display{
+    font-size: 1em;
+  }
+
+  .stop-menu{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+ input[type='checkbox'] {
+  display: none;
+}
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: bebasNeue;;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1em;
+
+  color: #0a4930;
+  background: #169A66;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #073321;
+}
+
+.content-inner p{
+  text-align: center;
+}
+
+.collapsible-content .content-inner {
+  background: #71c4a1;
+/*  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;*/
+  padding: .5em 0;
+   padding-right: .6em;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  border-color: #2a4c3e;
+  margin-bottom: 0.1em;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 1000px;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+}
+
+
+/***** END CSS FOR TIMESAVE *********/
+
+
+@media only screen and (max-width: 500px) {
+   .header h1{
+      font-size: 10vw;
+      padding: 15vh 0 0 0;
+   }
+
+   .background_map{
+      background: url(../images/MBTA_Crop.png) 20% 40%;
+      height: 40vh;
+   }
+
+
+/* web */
 @media only screen and (min-width: 501px) and (max-width: 1024px) {
   .header h1{
       font-size: 10vw;
@@ -460,9 +569,6 @@ nav{
    .background_map{
       height: 40vh;
    }
-   .button_container{
-      position: absolute;
-   }
 
 }
 
@@ -478,10 +584,6 @@ nav{
 
    svg{
     margin: -15em 0em -10em;
-   }
-
-   #tacomode-intro{
-    padding: 1em;
    }
 
    .background_map{

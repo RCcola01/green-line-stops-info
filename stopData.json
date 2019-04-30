@@ -1,0 +1,169 @@
+{ 
+  "Boston_College":{ 
+    "time_saved" : "This is the terminus",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : "No bus connections",
+    "nearbyTacos": "",
+  },
+
+  "Hynes":{ 
+    "time_saved" : "0m 52s",
+    "nearbyTrainStops" : ["C Line, D Line"],
+    "nearbyBusStops" : ["1, CT1"],
+    "nearbyTacos": "",
+  },
+
+    "Kenmore_Sq":{ 
+    "time_saved" : "1m 1s",
+    "nearbyTrainStops" : ["C Line, D Line"],
+    "nearbyBusStops" : ["8, 19, 57, 57A, 60, 65"],
+    "nearbyTacos": "",
+  },
+
+  "Blandford_St":{ 
+    "time_saved" : "0m 50s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["57, 57A"],
+    "nearbyTacos": "",
+  },
+
+  "BU_East":{ 
+    "time_saved" : "0m 54s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["57, 57A"],
+    "nearbyTacos": "",
+  },
+
+  "BU_Central":{ 
+    "time_saved" : "0m 49s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["57, 57A", "47", "CT2"],
+    "nearbyTacos": "",
+  },
+
+  "BU_West":{ 
+    "time_saved" : "0m 43s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["57, 57A"],
+    "nearbyTacos": "",
+  },
+
+  "Saint_Paul_St":{ 
+    "time_saved" : "0m 43s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["57, 57A"],
+    "nearbyTacos": "",
+  },
+
+  "Pleasant_St":{ 
+    "time_saved" : "0m 48s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["57, 57A"],
+    "nearbyTacos": "",
+  },
+
+  "Babcock_St":{ 
+    "time_saved" : "0m 47s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["57, 57A"],
+    "nearbyTacos": "",
+  },
+
+  "Packards_Corner":{ 
+    "time_saved" : "0m 56s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["57, 57A"],
+    "nearbyTacos": "",
+  },
+
+  "Harvard_Ave":{ 
+    "time_saved" : "0m 50s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["57, 57A", "66"],
+    "nearbyTacos": "",
+  },
+
+  "Griggs_St":{ 
+    "time_saved" : "0m 47s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : "No bus connections",
+    "nearbyTacos": "",
+  },
+
+  "Allston_St":{ 
+    "time_saved" : "0m 50s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : "No bus connections",
+    "nearbyTacos": "",
+  },
+
+  "Warren_St":{ 
+    "time_saved" : "0m 40s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : "No bus connections",
+    "nearbyTacos": "",
+  },
+
+  "Washington_St":{ 
+    "time_saved" : "0m 39s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : "65",
+    "nearbyTacos": "",
+  },
+
+  "Sutherland_Rd":{ 
+    "time_saved" : "0m 49s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : "No bus connections",
+    "nearbyTacos": "",
+  },
+
+  "Chiswick_Rd":{ 
+    "time_saved" : "0m 48s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : "No bus connections",
+    "nearbyTacos": "",
+  },
+
+  "Chestnut_Hill_Ave":{ 
+    "time_saved" : "0m 40s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["51, 86"],
+    "nearbyTacos": "",
+  },
+
+  "South_St":{ 
+    "time_saved" : "0m 40s",
+    "nearbyTrainStops" : "No train connections",
+    "nearbyBusStops" : ["51. 86"],
+    "nearbyTacos": "",
+  },
+
+  "Copley":{ 
+    "time_saved" : "0m 54s",
+    "nearbyTrainStops" : ["C Line, D Line, E Line"],
+    "nearbyBusStops" : ["9, 10, 39, 43, 45, 98, 99"],
+    "nearbyTacos": "",
+  },
+
+  "Arlington":{ 
+    "time_saved" : "0m 54s",
+    "nearbyTrainStops" : ["C Line, D Line, E Line"],
+    "nearbyBusStops" : ["9, 43, 98, 99"],
+    "nearbyTacos": "",
+  },
+
+  "Boylston":{ 
+    "time_saved" : "0m 50s",
+    "nearbyTrainStops" : ["C Line, D Line, E Line"],
+    "nearbyBusStops" : ["43, 98, 99"],
+    "nearbyTacos": "",
+  },
+
+  "Park_St":{ 
+    "time_saved" : "This is the terminus",
+    "nearbyTrainStops" : ["C Line, D Line, E Line"],
+    "nearbyBusStops" : ["15, 39, 43, 55, 98, 99"],
+    "nearbyTacos": "",
+  }
+}
