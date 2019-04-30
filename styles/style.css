@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6{
    font-family: bebasNeue;
 }
 
+#infohead{
+  text-align: center;
+}
+
 .header{
    width: 100%;
    height: 50vh;
