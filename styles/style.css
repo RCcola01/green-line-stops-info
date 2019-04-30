@@ -294,7 +294,7 @@ cursor: default;
 }
 
 .overlay {
-   position: fixed;
+   position: absolute;
    background: #0C8A16;
    top: 0;
    left: 65%;
@@ -427,7 +427,7 @@ nav{
    }
 
    .button_container{
-      position: fixed;
+      position: absolute;
       left: 80%;
    }
 
@@ -461,7 +461,7 @@ nav{
       height: 40vh;
    }
    .button_container{
-      position: fixed;
+      position: absolute;
    }
 
 }

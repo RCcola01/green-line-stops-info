@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6{
 }
 #instruction-box{
   margin: 2em;
-  margin-bottom: -10em;
+  margin-bottom: -4em;
   font-size: 1.3em;
 }
 .header h1{
@@ -174,10 +174,7 @@ ellipse:hover {
   font-family: Lato;
   font-size: 1.2em;
   margin-bottom: 2em;
-/*  margin: 2em;
-  top: 8em;
-  margin-right: 7em;
-*/
+
 
 }
 
@@ -186,16 +183,19 @@ ellipse:hover {
 }
 
 .grid-container{
-  float: right;
-  margin-right: 12em;
-  display: grid;
+  display:flex;
+  top: 30em;
+  width: 75%;
+  float: left;
+  margin-top:-.7em;
+  margin-left: 2em;
   grid-template-columns: 15em 3em;
   grid-column-gap: 15px;
   position: relative;
-  top: 18em;
+
 }
 
-.time-save-display {
+/*.time-save-display {
 
   text-align:left ;
   height: 0px;
@@ -207,10 +207,33 @@ ellipse:hover {
   margin-right: 7em;
 */
 
-}
+/*}*/
+
+  
+  .time-save-display{
+    right: auto;
+    float: left;
+    
+    margin-right: 2em;
+    top: 0;
+    width: 14em;
+  }
+
+  .time-save-display h1{
+    font-family: Lato;
+    float: left;
+    text-align: left;
+  }
+
+  .toggle-switch{
+    margin-top: 0;
+    margin-left: 2em;
+  }
+
 
 #min-sec{
-  margin-top: 3.5em;
+  margin-top: 1.4em;
+  text-align: left;
 }
 
 
@@ -397,55 +420,16 @@ svg{
 
 /***** START CSS FOR TIMESAVE *********/
 
-@media only screen and (max-width: 975px) {
 
 
+@media only screen and (max-width: 740px) {
+.grid-container{
 
-  .grid-container{
-    display:flex;
-    top: 30em;
-    width: 55%;
-    
-/*    float: right;
-    margin-right: 12em;
-    display: grid;
-    grid-template-columns: 20% 20%;
-    grid-column-gap: 20%;
-    position: relative;
-    top: 30em;*/
-
-  }
-
-  .time-save-display{
-    right: auto;
-    float: left;
-    margin-top:0;
-    margin-right: 2em;
-    top: 0;
-    width: auto;
-  }
-
-  .toggle-switch{
-    margin-top: 0;
-  }
-
-
-
+  top: 22em;
+  
 
 }
 
-@media only screen and (max-width: 765px) {
-  .grid-container{
-    display: grid;
-    grid-template-columns: 13em;
-    grid-template-rows: 8em 8em;
-    top: 25em;
-  }
-
-  .time-save-display{
-    font-size: 1em;
-  }
-}
 
 /***** END CSS FOR TIMESAVE *********/
 
