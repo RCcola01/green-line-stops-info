@@ -1,0 +1,22 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "json file",
+  "main": "entry",
+  "scripts": {
+    "test": "yes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RCcola01/green-line-stops-info.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RCcola01/green-line-stops-info/issues"
+  },
+  "homepage": "https://github.com/RCcola01/green-line-stops-info#readme",
+  "dependencies": {
+    "firebase": "^5.10.1"
+  }
+}
