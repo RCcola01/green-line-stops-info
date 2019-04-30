@@ -1,3 +1,34 @@
+$("circle, ellipse").hover(function(e) {
+  $('#info-box').css('display','block');
+  $('#info-box').html($(this).data('info'));
+});
+
+$("path, circle").mouseleave(function(e) {
+  $('#info-box').css('display','none');
+});
+
+$("path, ellipse").mouseleave(function(e) {
+  $('#info-box').css('display','none');
+});
+
+$(document).mousemove(function(e) {
+  $('#info-box').css('top',e.pageY-$('#info-box').height()-30);
+  $('#info-box').css('left',e.pageX-($('#info-box').width())/2);
+}).mouseover();
+
+var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if(ios) {
+  $('a').on('click touchend', function() {
+    var link = $(this).attr('href');
+    window.open(link,'_blank');
+    return false;
+  });
+}
+
+
+
+
+
 
 
 const stopData = { 
@@ -218,13 +249,13 @@ const stopData = {
   }
 };
 
-// Hover Stop Info
+// // Hover Stop Info
 
 
 
-/*******JS FOR TIMESAVE HTML*********/
+// /*******JS FOR TIMESAVE HTML*********/
 
-//Global Variables
+// //Global Variables
 var timeHeader = document.getElementById('header');
 var timeVal = document.getElementById('min-sec');
 var totalTime = document.getElementById('time-save-total');
@@ -235,7 +266,7 @@ var visitedStops = [];
 var runningTotal = "0:00";
 
 
-// Event Listeners
+// // Event Listeners
 
 for (var i = 0; i < classname.length; i++) {
     let idVar = classname[i].id;
@@ -243,6 +274,7 @@ for (var i = 0; i < classname.length; i++) {
       updateTime(idVar);
     });
 }
+
 
 totalToggle.addEventListener('click', showRunningTotal);
 startOver.addEventListener('click', function(){
@@ -326,35 +358,5 @@ function formatTime(seconds) {
           pad(Math.floor(seconds/60)%60)
           ].join(":");
 }
-
-/*******END JS FOR TIMESAVE HTML*********/
-
-//hover stop infor
-
-$("circle, ellipse").hover(function(e) {
-  $('#info-box').css('display','block');
-  $('#info-box').html($(this).data('info'));
-});
-
-$("path, circle, ellipse").mouseleave(function(e) {
-  $('#info-box').css('display','none');
-});
-
-$(document).mousemove(function(e) {
-  $('#info-box').css('top',e.pageY-$('#info-box').height()-30);
-  $('#info-box').css('left',e.pageX-($('#info-box').width())/2);
-}).mouseover();
-
-
-var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-if(ios) {
-  $('a').on('click touchend', function() {
-    var link = $(this).attr('href');
-    window.open(link,'_blank');
-    return false;
-  });
-}
-
-
 
 
