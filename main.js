@@ -467,10 +467,10 @@ var classname;
       }
     };
   
-
+var hasBeenScaled = false;
 window.addEventListener('resize', changeData);
-
 function changeData() {
+  hasBeenScaled = true;
   console.log($( window ).width());
   if($( window ).width() < 765){
     console.log("SMOL");
@@ -483,7 +483,27 @@ function changeData() {
     stopData = stopDataBIG;
     classname = classnameBIG;
   }
+  for (var i = 0; i < classname.length; i++) {
+  let idVar = classname[i].id;
+  classname[i].addEventListener('click', function(){
+      updateTime(idVar);
+  });
 }
+  if(attachToScale && hasBeenScaled){
+    console.log("ATTACHING EVENT LISTENER");
+      for (var i = 0; i < classname.length; i++) {
+        let idVar = classname[i].id;
+        console.log("ADDING LISTNER" + idVar);
+        classname[i].addEventListener('click', function(){
+          updateRunningTotal(idVar);
+        });
+      }
+      attachToScale = false;
+    }
+showRunningTotal();
+}
+
+
 
 if($( window ).width() < 765){
   stopData = stopDataSMOL;
@@ -510,16 +530,18 @@ var visitedStops = [];
 var visitedStop = "";
 var runningTotal = "0:00";
 var updateCount = 0;
+var attachToScale = true;
 
 
 // Event Listeners
 
-for (var i = 0; i < classname.length; i++) {
+  for (var i = 0; i < classname.length; i++) {
     let idVar = classname[i].id;
     classname[i].addEventListener('click', function(){
       updateTime(idVar);
     });
-}
+
+
 
 totalToggle.addEventListener('click', showRunningTotal);
 startOver.addEventListener('click', function(){
@@ -530,6 +552,8 @@ startOver.addEventListener('click', function(){
     totalTime.innerHTML = "Total Time Saved: " + runningTotal;
   }
 });
+}
+
 
 
 // Functions
@@ -564,7 +588,6 @@ function showRunningTotal(){
 function updateRunningTotal(stopName){
   if(totalToggle.checked){
     updateCount++;
-    console.log(updateCount);
     stopName.toString();
     timeStamp = stopData[stopName].time_stamp;
     visitedStop = document.getElementById(stopName);
