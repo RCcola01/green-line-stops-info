@@ -1,3 +1,30 @@
+$("circle, ellipse").hover(function(e) {
+  $('#info-box').css('display','block');
+  $('#info-box').html($(this).data('info'));
+});
+
+$("path, circle").mouseleave(function(e) {
+  $('#info-box').css('display','none');
+});
+
+$("path, ellipse").mouseleave(function(e) {
+  $('#info-box').css('display','none');
+});
+
+$(document).mousemove(function(e) {
+  $('#info-box').css('top',e.pageY-$('#info-box').height()-30);
+  $('#info-box').css('left',e.pageX-($('#info-box').width())/2);
+}).mouseover();
+
+var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if(ios) {
+  $('a').on('click touchend', function() {
+    var link = $(this).attr('href');
+    window.open(link,'_blank');
+    return false;
+  });
+}
+
 
 
 const stopData = { 
@@ -232,9 +259,9 @@ var totalToggle = document.getElementById('total-toggle');
 const classname = document.getElementsByClassName("st1");
 const startOver = document.getElementById('reset');
 var visitedStops = [];
+var visitedStop = "";
 var runningTotal = "0:00";
-//let mql = window.matchMedia('(max-width: 600px)');
-//document.querySelector(".mq-value").innerText = mql.matches;
+var updateCount = 0;
 
 
 // Event Listeners
@@ -261,39 +288,52 @@ startOver.addEventListener('click', function(){
 
 // Function to display total time
 function showRunningTotal(){
-  runningTotal = "0:00";
   if(totalToggle.checked){
+    console.log("checked!");
     totalTime.style.display = "block";
-    for (var i = 0; i < classname.length; i++) {
-      let idVar = classname[i].id;
-      classname[i].addEventListener('click', function(){
-        updateRunningTotal(idVar);
-        updateTime(idVar);
-      });
+    if(updateCount < 1){
+      for (var i = 0; i < classname.length; i++) {
+        let idVar = classname[i].id;
+        classname[i].addEventListener('click', function(){
+          updateRunningTotal(idVar);
+        });
+      }
     }
   }
   else{
+    console.log('notchecked');
     totalTime.style.display = "none";
+    for (var i = 0; i < classname.length; i++) {
+      let idVar = classname[i].id;
+      classname[i].removeEventListener('click', function(){
+        updateRunningTotal(idVar);
+      });
   }
+}
 }
 
 
 function updateRunningTotal(stopName){
-  stopName.toString();
-  timeStamp = stopData[stopName].time_stamp;
-  var visitedStop = document.getElementById(stopName);
-  if (visitedStop.style.fill == "grey"){
-    visitedStop.style.fill = "";
-    visitedStop.style.stroke = "";
-    visitedStops.splice(visitedStops.indexOf(stopName), 1 );
-    runningTotal = formatTime(timestrToSec(runningTotal) - timestrToSec(timeStamp));
-  }
-  else{
-    visitedStops.push(visitedStop);
-    visitedStop.style.fill = "grey";
-    visitedStop.style.stroke = "grey";
-    runningTotal = formatTime(timestrToSec(runningTotal) + timestrToSec(timeStamp));
-    console.log(runningTotal);
+  if(totalToggle.checked){
+    updateCount++;
+    console.log(updateCount);
+    stopName.toString();
+    timeStamp = stopData[stopName].time_stamp;
+    visitedStop = document.getElementById(stopName);
+    if (visitedStop.style.fill == "grey"){
+      visitedStop.style.fill = "";
+      visitedStop.style.stroke = "";
+      visitedStops.splice(visitedStops.indexOf(stopName), 1 );
+      runningTotal = formatTime(timestrToSec(runningTotal) - timestrToSec(timeStamp));
+      console.log("REPEAT" + runningTotal);
+    }
+    else{
+      visitedStops.push(visitedStop);
+      visitedStop.style.fill = "grey";
+      visitedStop.style.stroke = "grey";
+      runningTotal = formatTime(timestrToSec(runningTotal) + timestrToSec(timeStamp));
+      console.log("NOREPEAT" + runningTotal);
+    }
   }
   totalTime.innerHTML = "Total Time Saved: " + runningTotal;
 }
@@ -308,6 +348,10 @@ var updateTime = function(stopName) {
     timeHeader.innerHTML = 'Eliminating ' + stopDisplayName + ' Saves:';
     timeVal.innerHTML = timeSaved;
 };
+
+
+
+
 
 // Functions for time addition and manipulation modified from https://stackoverflow.com/questions/26056434/sum-of-time-using-javascript
 function timestrToSec(timestr) {
@@ -330,33 +374,5 @@ function formatTime(seconds) {
 }
 
 /*******END JS FOR TIMESAVE HTML*********/
-
-//hover stop infor
-
-$("circle, ellipse").hover(function(e) {
-  $('#info-box').css('display','block');
-  $('#info-box').html($(this).data('info'));
-});
-
-$("path, circle, ellipse").mouseleave(function(e) {
-  $('#info-box').css('display','none');
-});
-
-$(document).mousemove(function(e) {
-  $('#info-box').css('top',e.pageY-$('#info-box').height()-30);
-  $('#info-box').css('left',e.pageX-($('#info-box').width())/2);
-}).mouseover();
-
-
-var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-if(ios) {
-  $('a').on('click touchend', function() {
-    var link = $(this).attr('href');
-    window.open(link,'_blank');
-    return false;
-  });
-}
-
-
 
 

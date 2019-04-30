@@ -4,64 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>B-Line Info</title>
+<link rel="stylesheet" type="text/css" href="styles/timeSaveStyle.css" />
 <link rel="stylesheet" type="text/css" href="styles/style.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
-<body class="border">
+<body>
+    <div class="header">
+         <div class="button_container" id="toggle">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+         </div>
+           <div class="background_map"></div>
+           <h1>Time Saving Mode</h1>
 
-<div class="header">
-       <div class="background_map"></div>
-       <h1>Green Line Stop Info</h1>
-       <h2> Time Saving Mode </h2>
-</div>
+           <a href="index.html"> <img src="images/logoThing.png" class="logo"> </a>
+    </div>
 
-<p class="instruction-box">Click on each stop to see how much time you would save if the stop were to be eliminated. Toggle the "Track Total Time Saved" switch to see how much time you can save altogether.</p>
+      <main>
 
-<!-- Inspired by https://alligator.io/css/collapsible/ -->
-<div class="stop-menu">
-  <input id="collapsible-underground" class="toggle" type="checkbox">
-  <label for="collapsible-underground" class="lbl-toggle">Underground Stops</label>
-  <div class="collapsible-content">
-    <div class="content-inner">
-      <button class = "stop-button" id="Park_St2">Park Street</button>
-      <button class = "stop-button" id="Boylston2">Boylston</button>	
-      <button class = "stop-button" id="Arlington2">Arlington</button>
-      <button class = "stop-button" id="Copley2">Copley</button>
-      <button class = "stop-button" id="Hynes2">Hynes Convention Center</button>
-      <button class = "stop-button" id="Kenmore_Sq2">Kenmore</button>
-    </div>
-  </div>
-  <input id="collapsible-bu" class="toggle" type="checkbox">
-  <label for="collapsible-bu" class="lbl-toggle">BU Stops</label>
-  <div class="collapsible-content">
-    <div class="content-inner">
-      <button class = "stop-button" id="Blandford_St2">Blandford Street</button>
-      <button class = "stop-button" id="BU_East2">Boston University East</button>	
-      <button class = "stop-button" id="BU_Central2">Boston University Central</button>
-      <button class = "stop-button" id="BU_West2">Boston University West</button>
-      <button class = "stop-button" id="Saint_Paul_St2">St. Paul Street</button>
-      <button class = "stop-button" id="Pleasant_St2">Pleasant Street</button>
-      <button class = "stop-button" id="Babcock_St2">Babcock Street</button>
-    </div>
-  </div>
-  <input id="collapsible-allbright" class="toggle" type="checkbox">
-  <label for="collapsible-allbright" class="lbl-toggle">Allston-Brighton Stops</label>
-  <div class="collapsible-content">
-    <div class="content-inner">
-      <button class = "stop-button" id="Packards_Corner2">Packards Corner</button>
-      <button class = "stop-button" id="Harvard_Ave2">Harvard Avenue</button>	
-      <button class = "stop-button" id="Griggs_St2">Griggs Street</button>
-      <button class = "stop-button" id="Allston_St2">Allston Street</button>
-      <button class = "stop-button" id="Warren_St2">Warren Street</button>
-      <button class = "stop-button" id="Washington_St2">Washington Street</button>
-      <button class = "stop-button" id="Sutherland_Rd2">Sutherland Road</button>
-      <button class = "stop-button" id="Chiswick_Rd2">Chiswick Road</button>
-      <button class = "stop-button" id="Chestnut_Hill_Ave2">Chestnut Hill Avenue</button>
-      <button class = "stop-button" id="South_St2">South Street</button>
-      <button class = "stop-button" id="Boston_College2">Boston College</button>
-    </div>
-  </div>
-</div>
+         <!-- Hamburger Nav - Start -->
+         <div class="overlay" id="overlay">
+            <nav class="overlay-menu">
+               <ul>
+                  <li>
+                     <a href="index.html">
+                        <section class="">
+                           <p class="bold">Home</p>
+                        </section>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="InfoMode.html">
+                        <section class="">
+                           <p class="bold">Info Mode</p>
+                        </section>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="tacomode.html">
+                        <section class="">
+                           <p class="bold">Taco Mode</p>
+                        </section>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="timesave.html">
+                        <section class="">
+                           <p class="bold">Time Saving Mode</p>
+                        </section>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+         </div>
+         <!-- Ham Nav - End-->
+
+     </main>
+
+<p id="instruction-box">Click on each stop to see how much time you would save if the stop were to be eliminated. Toggle the "Track Total Time Saved" switch to see how much time you can save altogether</p>
 
 <div class="grid-container">
 
@@ -79,17 +80,17 @@
 	  		<input type="checkbox" id="total-toggle">
 	  		<span class="slider round"></span>
 		</label>
-		<button class="time-save-form" id="reset"> Start Over </button>
+		<p> </p>
+		<button class=class="time-save-form" id="reset"> Start Over </button>
 	</div>
+
+
+	
 </div>
-
-
 
    <div id="info-box"></div>
 
    <?xml version="1.0" encoding="utf-8"?>
-
-
 <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 792 612" style="enable-background:new 0 0 792 612;" xml:space="preserve">
@@ -133,10 +134,16 @@
    <circle id="Park_St" data-info="<div>Park Street</div>" data-name="Park St" class="st1" cx="753.87" cy="315.59" r="5.82"/>
 </g>
 </svg>
+   
+   
+   
+
+   
+
        
    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<!--   <script type="text/javascript" src="stopData.json"></script>-->
+   <script type="text/javascript" src="stopData.json"></script>
+   <script src="ham.js"></script>
    <script src="main.js"></script>
-   <script src="main2.js"></script>
 </body>
 </html>

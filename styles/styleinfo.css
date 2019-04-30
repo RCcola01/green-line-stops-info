@@ -19,14 +19,13 @@ h1, h2, h3, h4, h5, h6{
    width: 100%;
    height: 50vh;
    display: flex;
-  flex-direction: column;
-    position: relative;
-    top: 0;
+   position: relative;
+   top: 0;
 }
 
 .header h1{
    color: rgba(0,0,0,1);
-   padding: 13vh 0 0 0;
+   padding: 5vh 0 0 0;
    font-size: 7vw;
    text-align: center;
    width: 100%;
@@ -54,11 +53,7 @@ p{
 
 a{
    text-decoration: none;
-   color: #14B71C;
-}
-a:hover{
-  text-decoration: none;
-   color: #FF962A;
+   color: #000;
 }
 
 .intro{
@@ -155,16 +150,13 @@ cursor: default;
 }
 
 .logo{
-   position: absolute;
-   top:0;
-   padding: 1em 1em .5em 1em;
+   padding: 0 1em .5em 1em;
    width: 16em;
-   margin-bottom: 3em;
 }
 
 .header_map{
    font-size: 1.3em;
-   width: 25%;
+   width: 100%;
 }
 
 .header_map p{
@@ -173,7 +165,42 @@ cursor: default;
    padding: .3em 0;
 }
 
+footer{
+   display: flex;
+   justify-content: center;
+   color: #FFF;
+   background-color: #0C8A16;
+}
 
+/* Border around the screen*/ 
+/* Original Source: https://css-tricks.com/body-border/*/
+.top, .bottom, .left, .right{
+   background: #0C8A16;
+   position: fixed;
+}
+.left, .right{
+   top: 0; bottom: 0;
+   width: 10px;
+}
+.left{ 
+   left: 0; 
+}
+.right{ 
+   right: 0; 
+}
+
+.top, .bottom{
+   left: 0; right: 0;
+   height: 10px;
+}
+
+.top{ 
+   top: 0; 
+}
+
+.bottom{ 
+   bottom: 0;
+}
 
 /* Original Source: https://codepen.io/anon/pen/EGvKZW */
 /****************   Popup Overlay   ******************/
@@ -188,7 +215,7 @@ cursor: default;
    transition: opacity 500ms;
    visibility: hidden;
    opacity: 0;
-   z-index: 1000;
+   z-index: 1000; /* Make it above the hamburger nav */
 }
 .overlay_pop:target {
    visibility: visible;
@@ -219,7 +246,7 @@ cursor: default;
 .popup-imgs{
    display: grid;
    width: 95%;
-   grid-template-columns: repeat(2, 45%);
+   grid-template-columns: repeat(1, 45%);
    grid-template-rows: repeat(auto);
    justify-items: center; /* Horizontal */
    align-items: center; /* Vertical */
@@ -242,7 +269,7 @@ cursor: default;
 /* Original Source: https://codepen.io/PaulVanO/pen/XJYGNQ */
 
 .button_container {
-   position: absolute;
+   position: relative;
    top: 2.5em;
    left: 90%;
    height: 2.3em;
@@ -253,6 +280,10 @@ cursor: default;
 
 .button_container:hover {
    opacity: 0.8;
+}
+
+.button_container.active{
+   position: fixed;
 }
 
 .button_container.active .top {
@@ -294,7 +325,7 @@ cursor: default;
 }
 
 .overlay {
-   position: absolute;
+   position: fixed;
    background: #0C8A16;
    top: 0;
    left: 65%;
@@ -427,7 +458,6 @@ nav{
    }
 
    .button_container{
-      position: absolute;
       left: 80%;
    }
 
@@ -443,52 +473,7 @@ nav{
 
 /* Tablet */
 @media only screen and (min-width: 501px) and (max-width: 1024px) {
-  .header h1{
-      font-size: 10vw;
-      padding: 15vh 0 0 0;
-   }
 
-   .header h2{
-    font-size: 6vw;
-    margin: -0.5em 0 -1em;
-   }
 
-   svg{
-    margin: -10em 0em 2em;
-   }
-
-   .background_map{
-      height: 40vh;
-   }
-   .button_container{
-      position: absolute;
-   }
 
 }
-
-@media only screen and (min-width: 1025px) {
-  .header h1{
-      font-size: 10vw;
-   }
-
-   .header h2{
-    font-size: 6vw;
-    margin: -0.5em 0 -1em;
-   }
-
-   svg{
-    margin: -15em 0em -10em;
-   }
-
-   #tacomode-intro{
-    padding: 1em;
-   }
-
-   .background_map{
-      height: 52vh;
-   }
-
-}
-
-
-
