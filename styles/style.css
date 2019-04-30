@@ -442,6 +442,23 @@ svg{
     top: 25em;
   }
 
+  .stop-button{
+    background-color: #96e0c1;
+    color: black;
+    border-radius: 0px;
+    border: 0px;
+    height: 5em;
+    width: 100%;
+    margin: 5px;
+    box-shadow: none;
+    font-weight: bold; 
+  }
+
+  .instruction-box{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
   svg{
     display: none;
    }
@@ -503,7 +520,7 @@ svg{
   transition: max-height .25s ease-in-out;
 }
 .toggle:checked + .lbl-toggle + .collapsible-content {
-  max-height: 350px;
+  max-height: 450px;
 }
 
 .toggle:checked + .lbl-toggle::before {

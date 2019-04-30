@@ -233,6 +233,8 @@ const classname = document.getElementsByClassName("st1");
 const startOver = document.getElementById('reset');
 var visitedStops = [];
 var runningTotal = "0:00";
+let mql = window.matchMedia('(max-width: 600px)');
+document.querySelector(".mq-value").innerText = mql.matches;
 
 
 // Event Listeners
