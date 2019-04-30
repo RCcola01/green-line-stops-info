@@ -23,9 +23,10 @@ h1, h2, h3, h4, h5, h6{
     position: relative;
     top: 0;
 }
-#instruction-box{
-  margin: 2em;
-  margin-bottom: -4em;
+.instruction-box{
+  padding: 1em;
+
+
   font-size: 1.3em;
 }
 .header h1{
@@ -175,7 +176,10 @@ ellipse:hover {
   font-size: 1.2em;
   margin-bottom: 2em;
 
+}
 
+#time-save-total{
+  text-align:left;
 }
 
 #header{
@@ -188,6 +192,7 @@ ellipse:hover {
   float: left;
   margin-top:-.7em;
   margin-left: 2em;
+  margin-bottom:-15em;
   grid-template-columns: 15em 3em;
   grid-column-gap: 15px;
   position: relative;
@@ -195,7 +200,6 @@ ellipse:hover {
 }
 
 /*.time-save-display {
-
   text-align:left ;
   height: 0px;
   font-family: Lato;
@@ -231,7 +235,7 @@ ellipse:hover {
 
 
 #min-sec{
-  margin-top: 1.4em;
+  margin-top: .7em;
   text-align: left;
 }
 
@@ -360,12 +364,26 @@ svg{
 
 @media only screen and (max-width: 740px) {
 .grid-container{
+  padding: .5em;
+  display:grid;
+  margin-top: -15em;
+  width: 20%;
+  float: left;
+  margin-left: 4em;
+  grid-template-columns: 100%;
+  grid-template-rows: 10em 10em;
+  grid-column-gap: 15px;
+
+
 
   top: 22em;
   
 
 }
 
+.toggle-switch{
+  margin-left:4em;
+}
 
 /***** END CSS FOR TIMESAVE *********/
 
