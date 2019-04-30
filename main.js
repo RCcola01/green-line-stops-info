@@ -468,8 +468,10 @@ var classname;
     };
   
 var hasBeenScaled = false;
+var windowSize= $( window ).width(); 
 window.addEventListener('resize', changeData);
 function changeData() {
+  if($( window ).width() <= 765){
   hasBeenScaled = true;
   console.log($( window ).width());
   if($( window ).width() < 765){
@@ -501,6 +503,7 @@ function changeData() {
       attachToScale = false;
     }
 showRunningTotal();
+}
 }
 
 
@@ -586,6 +589,7 @@ function showRunningTotal(){
 
 
 function updateRunningTotal(stopName){
+  console.log("UPDATING????");
   if(totalToggle.checked){
     updateCount++;
     stopName.toString();
