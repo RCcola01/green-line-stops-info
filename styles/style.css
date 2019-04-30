@@ -54,7 +54,11 @@ p{
 
 a{
    text-decoration: none;
-   color: #000;
+   color: #14B71C;
+}
+a:hover{
+  text-decoration: none;
+   color: #FF962A;
 }
 
 .intro{
@@ -184,7 +188,7 @@ cursor: default;
    transition: opacity 500ms;
    visibility: hidden;
    opacity: 0;
-   z-index: 10;
+   z-index: 1000;
 }
 .overlay_pop:target {
    visibility: visible;
