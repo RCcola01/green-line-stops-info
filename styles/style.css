@@ -375,6 +375,7 @@ svg{
 }
 
 .stop-menu{
+   margin: 0 10px 0 10px;
   display: none;
 }
 
@@ -506,10 +507,10 @@ svg{
 .collapsible-content .content-inner {
   background: #71c4a1;
 /*  border-bottom: 1px solid rgba(250, 224, 66, .45);
-
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;*/
   padding: .5em 0;
+   padding-right: .6em;
 }
 
 .collapsible-content {
