@@ -1,11 +1,11 @@
-
 .popup div p{
-   display: inline;
+   display: block;
    font-family: Lato;
 }
 
-/***********************/
-
+.italics{
+   font-style: italic;
+}
 
 @font-face{
    font-family: bebasNeue;
