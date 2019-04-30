@@ -216,6 +216,19 @@ const stopData = {
   }
 };
 
+// const stops = document.getElementsByClassName("stop-button");
+
+// // event listeners 
+// for (var i = 0; i < stops.length; i++) {
+//     let idVar = stops[i].id;
+//     stops[i].addEventListener('click', function(){
+      
+//     });
+// }
+
+
+
+
 for (var stop in stopData){
   var currentDiv = document.getElementById(stop.toString());
   let pname = stopData[stop].proper_name;
@@ -237,6 +250,7 @@ for (var stop in stopData){
   currentDiv.appendChild(busBlurbP);
   currentDiv.appendChild(trainBlurbP);
 }
+
 $("circle, ellipse").hover(function(e) {
   $('#info-box').css('display','block');
   $('#info-box').html($(this).data('info'));
