@@ -27,10 +27,6 @@ if(ios) {
 
 
 
-
-
-
-
 const stopData = { 
   "Boston_College":{ 
     "proper_name": "Boston College",
@@ -249,13 +245,13 @@ const stopData = {
   }
 };
 
-// // Hover Stop Info
+// Hover Stop Info
 
 
 
-// /*******JS FOR TIMESAVE HTML*********/
+/*******JS FOR TIMESAVE HTML*********/
 
-// //Global Variables
+//Global Variables
 var timeHeader = document.getElementById('header');
 var timeVal = document.getElementById('min-sec');
 var totalTime = document.getElementById('time-save-total');
@@ -263,10 +259,12 @@ var totalToggle = document.getElementById('total-toggle');
 const classname = document.getElementsByClassName("st1");
 const startOver = document.getElementById('reset');
 var visitedStops = [];
+var visitedStop = "";
 var runningTotal = "0:00";
+var updateCount = 0;
 
 
-// // Event Listeners
+// Event Listeners
 
 for (var i = 0; i < classname.length; i++) {
     let idVar = classname[i].id;
@@ -274,7 +272,6 @@ for (var i = 0; i < classname.length; i++) {
       updateTime(idVar);
     });
 }
-
 
 totalToggle.addEventListener('click', showRunningTotal);
 startOver.addEventListener('click', function(){
@@ -291,39 +288,52 @@ startOver.addEventListener('click', function(){
 
 // Function to display total time
 function showRunningTotal(){
-  runningTotal = "0:00";
   if(totalToggle.checked){
+    console.log("checked!");
     totalTime.style.display = "block";
-    for (var i = 0; i < classname.length; i++) {
-      let idVar = classname[i].id;
-      classname[i].addEventListener('click', function(){
-        updateRunningTotal(idVar);
-        updateTime(idVar);
-      });
+    if(updateCount < 1){
+      for (var i = 0; i < classname.length; i++) {
+        let idVar = classname[i].id;
+        classname[i].addEventListener('click', function(){
+          updateRunningTotal(idVar);
+        });
+      }
     }
   }
   else{
+    console.log('notchecked');
     totalTime.style.display = "none";
+    for (var i = 0; i < classname.length; i++) {
+      let idVar = classname[i].id;
+      classname[i].removeEventListener('click', function(){
+        updateRunningTotal(idVar);
+      });
   }
+}
 }
 
 
 function updateRunningTotal(stopName){
-  stopName.toString();
-  timeStamp = stopData[stopName].time_stamp;
-  var visitedStop = document.getElementById(stopName);
-  if (visitedStop.style.fill == "grey"){
-    visitedStop.style.fill = "";
-    visitedStop.style.stroke = "";
-    visitedStops.splice(visitedStops.indexOf(stopName), 1 );
-    runningTotal = formatTime(timestrToSec(runningTotal) - timestrToSec(timeStamp));
-  }
-  else{
-    visitedStops.push(visitedStop);
-    visitedStop.style.fill = "grey";
-    visitedStop.style.stroke = "grey";
-    runningTotal = formatTime(timestrToSec(runningTotal) + timestrToSec(timeStamp));
-    console.log(runningTotal);
+  if(totalToggle.checked){
+    updateCount++;
+    console.log(updateCount);
+    stopName.toString();
+    timeStamp = stopData[stopName].time_stamp;
+    visitedStop = document.getElementById(stopName);
+    if (visitedStop.style.fill == "grey"){
+      visitedStop.style.fill = "";
+      visitedStop.style.stroke = "";
+      visitedStops.splice(visitedStops.indexOf(stopName), 1 );
+      runningTotal = formatTime(timestrToSec(runningTotal) - timestrToSec(timeStamp));
+      console.log("REPEAT" + runningTotal);
+    }
+    else{
+      visitedStops.push(visitedStop);
+      visitedStop.style.fill = "grey";
+      visitedStop.style.stroke = "grey";
+      runningTotal = formatTime(timestrToSec(runningTotal) + timestrToSec(timeStamp));
+      console.log("NOREPEAT" + runningTotal);
+    }
   }
   totalTime.innerHTML = "Total Time Saved: " + runningTotal;
 }
@@ -338,6 +348,10 @@ var updateTime = function(stopName) {
     timeHeader.innerHTML = 'Eliminating ' + stopDisplayName + ' Saves:';
     timeVal.innerHTML = timeSaved;
 };
+
+
+
+
 
 // Functions for time addition and manipulation modified from https://stackoverflow.com/questions/26056434/sum-of-time-using-javascript
 function timestrToSec(timestr) {
@@ -358,5 +372,7 @@ function formatTime(seconds) {
           pad(Math.floor(seconds/60)%60)
           ].join(":");
 }
+
+/*******END JS FOR TIMESAVE HTML*********/
 
 
