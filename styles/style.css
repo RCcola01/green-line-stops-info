@@ -62,7 +62,11 @@ p{
 
 a{
    text-decoration: none;
-   color: #000;
+   color: #0a4930;
+}
+
+a:hover{
+  color: #ff962a;
 }
 
 .intro{
