@@ -624,9 +624,3 @@ function formatTime(seconds) {
 /*******END JS FOR TIMESAVE HTML*********/
 
 //hover stop infor
-
-
-
-
-
-
