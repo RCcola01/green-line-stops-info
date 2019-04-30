@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>B-Line Info</title>
-<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+<link rel="stylesheet" type="text/css" href="styles/style.css" />
 <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 <body class="border">
@@ -15,7 +15,52 @@
        <h2> Time Saving Mode </h2>
 </div>
 
-<p id="instruction-box">Click on each stop to see how much time you would save if the stop were to be eliminated. Toggle the "Track Total Time Saved" switch to see how much time you can save altogether</p>
+<p class="instruction-box">Click on each stop to see how much time you would save if the stop were to be eliminated. Toggle the "Track Total Time Saved" switch to see how much time you can save altogether.</p>
+
+<!-- Inspired by https://alligator.io/css/collapsible/ -->
+<div class="stop-menu">
+  <input id="collapsible-underground" class="toggle" type="checkbox">
+  <label for="collapsible-underground" class="lbl-toggle">Underground Stops</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>Park Street</p>
+      <p>Boylston</p>	
+      <p>Arlington</p>
+      <p>Copley</p>
+      <p>Hynes Convention Center</p>
+      <p>Kenmore</p>
+    </div>
+  </div>
+  <input id="collapsible-bu" class="toggle" type="checkbox">
+  <label for="collapsible-bu" class="lbl-toggle">BU Stops</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>Blandford Street</p>
+      <p>Boston University East</p>	
+      <p>Boston University West</p>
+      <p>St. Paul Street</p>
+      <p>Pleasant Street</p>
+      <p>Babcock Street</p>
+    </div>
+  </div>
+  <input id="collapsible-allbright" class="toggle" type="checkbox">
+  <label for="collapsible-allbright" class="lbl-toggle">Allston-Brighton Stops</label>
+  <div class="collapsible-content">
+    <div class="content-inner">
+      <p>Packards Corner</p>
+      <p>Harvard Avenue</p>	
+      <p>Griggs Street</p>
+      <p>Allston Street</p>
+      <p>Warren Street</p>
+      <p>Washington Street</p>
+      <p>Sutherland Road</p>
+      <p>Chiswick Road</p>
+      <p>Chestnut Hill Avenue</p>
+      <p>South Street</p>
+      <p>Boston College</p>
+    </div>
+  </div>
+</div>
 
 <div class="grid-container">
 
@@ -33,17 +78,17 @@
 	  		<input type="checkbox" id="total-toggle">
 	  		<span class="slider round"></span>
 		</label>
-		<p> </p>
 		<button class=class="time-save-form" id="reset"> Start Over </button>
 	</div>
-
-
-	
 </div>
+
+
 
    <div id="info-box"></div>
 
    <?xml version="1.0" encoding="utf-8"?>
+
+
 <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 792 612" style="enable-background:new 0 0 792 612;" xml:space="preserve">
@@ -87,12 +132,6 @@
    <circle id="Park_St" data-info="<div>Park Street</div>" data-name="Park St" class="st1" cx="753.87" cy="315.59" r="5.82"/>
 </g>
 </svg>
-   
-   
-   
-
-   
-
        
    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
    <script type="text/javascript" src="stopData.json"></script>

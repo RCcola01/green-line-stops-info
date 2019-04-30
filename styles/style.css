@@ -161,10 +161,10 @@ ellipse:hover {
   font-family: Lato;
 }
 
-.border{
+/*.border{
    margin: 0;
    border: 10px #0C8A16 solid;
-}
+}*/
 
 /***** START CSS FOR TIMESAVE *********/
 .time-save-display {
@@ -374,6 +374,10 @@ svg{
   margin: -7em 0 3em;
 }
 
+.stop-menu{
+  display: none;
+}
+
 /************************************/
 /* Mobile */
 @media only screen and (max-width: 500px) {
@@ -385,10 +389,6 @@ svg{
    .background_map{
       background: url(../images/MBTA_Crop.png) 20% 40%;
       height: 40vh;
-   }
-
-svg{
-    margin: -5em 0 3em;
    }
    .buttons{
       margin: -1.5em 0 1em;
@@ -442,10 +442,80 @@ svg{
     top: 25em;
   }
 
+  svg{
+    display: none;
+   }
+
   .time-save-display{
     font-size: 1em;
   }
+
+  .stop-menu{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+ input[type='checkbox'] {
+  display: none;
 }
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: bebasNeue;;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1em;
+
+  color: #0a4930;
+  background: #169A66;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #073321;
+}
+
+.content-inner p{
+  text-align: center;
+}
+
+.collapsible-content .content-inner {
+  background: #71c4a1;
+/*  border-bottom: 1px solid rgba(250, 224, 66, .45);
+
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;*/
+  padding: .5em 1em;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  border-color: #2a4c3e;
+  margin-bottom: 0.1em;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 350px;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+}
+
 
 /***** END CSS FOR TIMESAVE *********/
 
