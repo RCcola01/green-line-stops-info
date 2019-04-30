@@ -1,3 +1,16 @@
+popup div p{
+   display: inline;
+   font-family: Lato;
+}
+
+
+
+
+
+
+/***********************/
+
+
 @font-face{
    font-family: bebasNeue;
    src: url(../fonts/BebasNeue-Regular.otf);
@@ -164,7 +177,7 @@ cursor: default;
 
 .header_map{
    font-size: 1.3em;
-   width: 25%;
+   width: 100%;
 }
 
 .header_map p{
@@ -173,6 +186,29 @@ cursor: default;
    padding: .3em 0;
 }
 
+footer{
+   display: flex;
+   justify-content: center;
+   color: #FFF;
+   background-color: #0C8A16;
+}
+
+/* Border around the screen*/ 
+/* Original Source: https://css-tricks.com/body-border/*/
+.top, .bottom, .left, .right{
+   background: #0C8A16;
+   position: fixed;
+}
+.left, .right{
+   top: 0; bottom: 0;
+   width: 10px;
+}
+.left{ 
+   left: 0; 
+}
+.right{ 
+   right: 0; 
+}
 
 
 /* Original Source: https://codepen.io/anon/pen/EGvKZW */
@@ -188,8 +224,8 @@ cursor: default;
    transition: opacity 500ms;
    visibility: hidden;
    opacity: 0;
-   z-index: 1000;
-}
+   z-index: 1000; /* Make it above the hamburger nav */
+
 .overlay_pop:target {
    visibility: visible;
    opacity: 1;
@@ -219,7 +255,7 @@ cursor: default;
 .popup-imgs{
    display: grid;
    width: 95%;
-   grid-template-columns: repeat(2, 45%);
+   grid-template-columns: repeat(1, 45%);
    grid-template-rows: repeat(auto);
    justify-items: center; /* Horizontal */
    align-items: center; /* Vertical */
@@ -253,6 +289,10 @@ cursor: default;
 
 .button_container:hover {
    opacity: 0.8;
+}
+
+.button_container.active{
+   position: fixed;
 }
 
 .button_container.active .top {
@@ -408,6 +448,10 @@ nav{
    }
 }
 
+.stop-menu{
+   display:none;
+}
+
 /************************** Mobile Stuff *****************/
 
 /* Phone */
@@ -441,13 +485,115 @@ nav{
 
 }
 
+@media only screen and (max-width: 765px) {
+   .stop-menu{
+      display: flex;
+   }
+
+  .grid-container{
+    display: grid;
+    grid-template-columns: 13em;
+    grid-template-rows: 8em 8em;
+    top: 25em;
+  }
+
+  .stop-button{
+    background-color: #96e0c1;
+    color: black;
+    border-radius: 0px;
+    border: 0px;
+    height: 5em;
+    width: 100%;
+    margin: 5px;
+    box-shadow: none;
+    font-weight: bold; 
+  }
+
+  .instruction-box{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  svg{
+    display: none;
+   }
+
+  .time-save-display{
+    font-size: 1em;
+  }
+
+  .stop-menu{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+ input[type='checkbox'] {
+  display: none;
+}
+.lbl-toggle {
+  display: block;
+
+  font-weight: bold;
+  font-family: bebasNeue;;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: 1em;
+
+  color: #0a4930;
+  background: #169A66;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #073321;
+}
+
+.content-inner p{
+  text-align: center;
+}
+
+.collapsible-content .content-inner {
+  background: #71c4a1;
+/*  border-bottom: 1px solid rgba(250, 224, 66, .45);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;*/
+  padding: .5em 0;
+   padding-right: .6em;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  border-color: #2a4c3e;
+  margin-bottom: 0.1em;
+  overflow: hidden;
+  transition: max-height .25s ease-in-out;
+}
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 1000px;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+}
+
 /* Tablet */
 @media only screen and (min-width: 501px) and (max-width: 1024px) {
   .header h1{
       font-size: 10vw;
       padding: 15vh 0 0 0;
    }
-
    .header h2{
     font-size: 6vw;
     margin: -0.5em 0 -1em;
