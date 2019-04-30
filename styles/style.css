@@ -1,13 +1,8 @@
 
-popup div p{
+.popup div p{
    display: inline;
    font-family: Lato;
 }
-
-
-
-
-
 
 /***********************/
 
@@ -164,6 +159,9 @@ cursor: default;
 }
 
 .logo{
+  position: absolute;
+  top: 1em;
+  left: 0px;
    padding: 0 1em .5em 1em;
    width: 16em;
 }
