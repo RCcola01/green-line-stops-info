@@ -468,10 +468,9 @@ var classname;
     };
   
 
-window.addEventListener('resize', shit);
+window.addEventListener('resize', changeData);
 
-function shit() {
-  document.location.reload()
+function changeData() {
   console.log($( window ).width());
   if($( window ).width() < 765){
     console.log("SMOL");
