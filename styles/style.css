@@ -229,7 +229,7 @@ cursor: default;
 
 .popup-imgs img{
    width: 100%;
-   max-height: 250px;
+   max-height: 350px;
 }
 
 .popup div p{
@@ -435,6 +435,10 @@ nav{
       left: 0;
       width: 100%;
       display: block;
+   }
+   
+   .popup-imgs{
+      grid-template-columns: repeat(1, 85%);
    }
 
 
