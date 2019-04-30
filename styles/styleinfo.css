@@ -19,27 +19,17 @@ h1, h2, h3, h4, h5, h6{
    width: 100%;
    height: 50vh;
    display: flex;
-  flex-direction: column;
-    position: relative;
-    top: 0;
+   position: relative;
+   top: 0;
 }
-#instruction-box{
-  margin: 2em;
-  margin-bottom: -10em;
-  font-size: 1.3em;
-}
+
 .header h1{
    color: rgba(0,0,0,1);
-   padding: 13vh 0 0 0;
+   padding: 5vh 0 0 0;
    font-size: 7vw;
    text-align: center;
    width: 100%;
    letter-spacing: 4px;
-}
-.header h2{
-  text-align: center;
-  margin: 0;
-  font-size: 4vw;
 }
 
 
@@ -63,11 +53,7 @@ p{
 
 a{
    text-decoration: none;
-   color: #14B71C;
-}
-a:hover{
-  text-decoration: none;
-   color: #FF962A;
+   color: #000;
 }
 
 .intro{
@@ -97,8 +83,6 @@ button{
 .button_2{
    background-color: #00009C; 
 }
-
-
 
 .green-1{
    background-color: #0C8A16;
@@ -153,166 +137,6 @@ stroke: #A9A9A9 !important;
 cursor: default;
 } */
 #info-box {
-  display: none;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: 1;
-  background-color: #ffffff;
-  border: 2px solid #14B71C;
-  border-radius: 5px;
-  padding: 5px;
-  font-family: Lato;
-}
-
-/*.border{
-   margin: 0;
-   border: 10px #0C8A16 solid;
-}*/
-
-/***** START CSS FOR TIMESAVE *********/
-.time-save-display {
-
-  text-align: center;
-  height: 0px;
-  font-family: Lato;
-  font-size: 1.2em;
-  margin-bottom: 2em;
-/*  margin: 2em;
-  top: 8em;
-  margin-right: 7em;
-*/
-
-}
-
-#header{
-  text-align: left;
-}
-
-.grid-container{
-  float: right;
-  margin-right: 12em;
-  display: grid;
-  grid-template-columns: 15em 3em;
-  grid-column-gap: 15px;
-  position: relative;
-  top: 18em;
-}
-
-.time-save-display {
-
-  text-align:left ;
-  height: 0px;
-  font-family: Lato;
-  font-size: 1.2em;
-  margin-bottom: 2em;
-/*  margin: 2em;
-  top: 8em;
-  margin-right: 7em;
-*/
-
-}
-
-#min-sec{
-  margin-top: 3.5em;
-}
-
-
-
-
-/*** Slider code taken and modified from https://www.w3schools.com/howto/howto_css_switch.asp (sorry) ****/
-/* The switch - the box around the slider */
-.switch {
-  margin-left: 3em;
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #14B71C;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #14B71C;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
- 
-/****End Slider Styles****/
-
-.toggle-switch{
-  float:right;
-  margin-bottom: 0px;
-
-/*  margin-right: 4em;
-  position: relative;
-  top: 18em;*/
-}
-
-#toggle-title{
-  width: 200px;
-}
-
-
-
-#reset{
-  width: 100px;
-  height: 34px;
-  margin: 2em;
-  margin-top: 1em;
-  margin-bottom: 0px;
-  margin-left: 2.7em;
-
-}
-
-/******** END CSS FOR TIMESAVE **********/
    display: none;
    position: absolute;
    top: 0px;
@@ -326,16 +150,13 @@ input:checked + .slider:before {
 }
 
 .logo{
-   position: absolute;
-   top:0;
-   padding: 1em 1em .5em 1em;
+   padding: 0 1em .5em 1em;
    width: 16em;
-   margin-bottom: 3em;
 }
 
 .header_map{
    font-size: 1.3em;
-   width: 25%;
+   width: 100%;
 }
 
 .header_map p{
@@ -344,6 +165,42 @@ input:checked + .slider:before {
    padding: .3em 0;
 }
 
+footer{
+   display: flex;
+   justify-content: center;
+   color: #FFF;
+   background-color: #0C8A16;
+}
+
+/* Border around the screen*/ 
+/* Original Source: https://css-tricks.com/body-border/*/
+.top, .bottom, .left, .right{
+   background: #0C8A16;
+   position: fixed;
+}
+.left, .right{
+   top: 0; bottom: 0;
+   width: 10px;
+}
+.left{ 
+   left: 0; 
+}
+.right{ 
+   right: 0; 
+}
+
+.top, .bottom{
+   left: 0; right: 0;
+   height: 10px;
+}
+
+.top{ 
+   top: 0; 
+}
+
+.bottom{ 
+   bottom: 0;
+}
 
 /* Original Source: https://codepen.io/anon/pen/EGvKZW */
 /****************   Popup Overlay   ******************/
@@ -358,7 +215,7 @@ input:checked + .slider:before {
    transition: opacity 500ms;
    visibility: hidden;
    opacity: 0;
-   z-index: 1000;
+   z-index: 1000; /* Make it above the hamburger nav */
 }
 .overlay_pop:target {
    visibility: visible;
@@ -389,7 +246,7 @@ input:checked + .slider:before {
 .popup-imgs{
    display: grid;
    width: 95%;
-   grid-template-columns: repeat(2, 45%);
+   grid-template-columns: repeat(1, 45%);
    grid-template-rows: repeat(auto);
    justify-items: center; /* Horizontal */
    align-items: center; /* Vertical */
@@ -412,7 +269,7 @@ input:checked + .slider:before {
 /* Original Source: https://codepen.io/PaulVanO/pen/XJYGNQ */
 
 .button_container {
-   position: absolute;
+   position: relative;
    top: 2.5em;
    left: 90%;
    height: 2.3em;
@@ -423,6 +280,10 @@ input:checked + .slider:before {
 
 .button_container:hover {
    opacity: 0.8;
+}
+
+.button_container.active{
+   position: fixed;
 }
 
 .button_container.active .top {
@@ -440,17 +301,6 @@ input:checked + .slider:before {
    background: #FFF;
 }
 
-svg{
-  margin: -7em 0 3em;
-}
-
-.stop-menu{
-   margin: 0 10px 0 10px;
-  display: none;
-}
-
-/************************************/
-/* Mobile */
 .button_container span {
    background: #000;
    border: none;
@@ -475,7 +325,7 @@ svg{
 }
 
 .overlay {
-   position: absolute;
+   position: fixed;
    background: #0C8A16;
    top: 0;
    left: 65%;
@@ -593,6 +443,7 @@ nav{
 
 /* Phone */
 @media only screen and (max-width: 500px) {
+
    .header h1{
       font-size: 10vw;
       padding: 15vh 0 0 0;
@@ -604,170 +455,9 @@ nav{
 
    .background_map{
       background: url(../images/MBTA_Crop.png) 20% 40%;
-      height: 40vh;
-   }
-   .buttons{
-      margin: -1.5em 0 1em;
-   }   
-}
-
-/***** START CSS FOR TIMESAVE *********/
-
-@media only screen and (max-width: 975px) {
-
-
-
-  .grid-container{
-    display:flex;
-    top: 30em;
-    width: 55%;
-    
-/*    float: right;
-    margin-right: 12em;
-    display: grid;
-    grid-template-columns: 20% 20%;
-    grid-column-gap: 20%;
-    position: relative;
-    top: 30em;*/
-
-  }
-
-  .time-save-display{
-    right: auto;
-    float: left;
-    margin-top:0;
-    margin-right: 2em;
-    top: 0;
-    width: auto;
-  }
-
-  .toggle-switch{
-    margin-top: 0;
-  }
-
-
-
-
-}
-
-@media only screen and (max-width: 765px) {
-  .grid-container{
-    display: grid;
-    grid-template-columns: 13em;
-    grid-template-rows: 8em 8em;
-    top: 25em;
-  }
-
-  .stop-button{
-    background-color: #96e0c1;
-    color: black;
-    border-radius: 0px;
-    border: 0px;
-    height: 5em;
-    width: 100%;
-    margin: 5px;
-    box-shadow: none;
-    font-weight: bold; 
-  }
-
-  .instruction-box{
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-  svg{
-    display: none;
    }
 
-  .time-save-display{
-    font-size: 1em;
-  }
-
-  .stop-menu{
-    display: flex;
-    flex-direction: column;
-  }
- 
- input[type='checkbox'] {
-  display: none;
-}
-.lbl-toggle {
-  display: block;
-
-  font-weight: bold;
-  font-family: bebasNeue;;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  text-align: center;
-
-  padding: 1em;
-
-  color: #0a4930;
-  background: #169A66;
-
-  cursor: pointer;
-
-  border-radius: 7px;
-  transition: all 0.25s ease-out;
-}
-
-.lbl-toggle:hover {
-  color: #073321;
-}
-
-.content-inner p{
-  text-align: center;
-}
-
-.collapsible-content .content-inner {
-  background: #71c4a1;
-/*  border-bottom: 1px solid rgba(250, 224, 66, .45);
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;*/
-  padding: .5em 0;
-   padding-right: .6em;
-}
-
-.collapsible-content {
-  max-height: 0px;
-  border-color: #2a4c3e;
-  margin-bottom: 0.1em;
-  overflow: hidden;
-  transition: max-height .25s ease-in-out;
-}
-.toggle:checked + .lbl-toggle + .collapsible-content {
-  max-height: 1000px;
-}
-
-.toggle:checked + .lbl-toggle::before {
-  transform: rotate(90deg) translateX(-3px);
-}
-
-.toggle:checked + .lbl-toggle {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-}
-
-
-/***** END CSS FOR TIMESAVE *********/
-
-
-@media only screen and (max-width: 500px) {
-   .header h1{
-      font-size: 10vw;
-      padding: 15vh 0 0 0;
-   }
-
-   .background_map{
-      background: url(../images/MBTA_Crop.png) 20% 40%;
-      height: 40vh;
-   }
-
-
-/* web */
    .button_container{
-      position: absolute;
       left: 80%;
    }
 
@@ -783,52 +473,7 @@ nav{
 
 /* Tablet */
 @media only screen and (min-width: 501px) and (max-width: 1024px) {
-  .header h1{
-      font-size: 10vw;
-      padding: 15vh 0 0 0;
-   }
 
-   .header h2{
-    font-size: 6vw;
-    margin: -0.5em 0 -1em;
-   }
 
-   svg{
-    margin: -10em 0em 2em;
-   }
-
-   .background_map{
-      height: 40vh;
-   }
-   .button_container{
-      position: absolute;
-   }
 
 }
-
-@media only screen and (min-width: 1025px) {
-  .header h1{
-      font-size: 10vw;
-   }
-
-   .header h2{
-    font-size: 6vw;
-    margin: -0.5em 0 -1em;
-   }
-
-   svg{
-    margin: -15em 0em -10em;
-   }
-
-   #tacomode-intro{
-    padding: 1em;
-   }
-
-   .background_map{
-      height: 52vh;
-   }
-
-}
-
-
-
