@@ -617,6 +617,12 @@ clip-path: circle(50% at 50% 50%);
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
+   
+   .flex-profile{
+      flex-flow: column;
+      align-items: center;
+   }
+   
 }
 
 /* Tablet */
