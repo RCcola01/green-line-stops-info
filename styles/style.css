@@ -192,35 +192,6 @@ footer{
    background-color: #0C8A16;
 }
 
-/* Border around the screen*/ 
-/* Original Source: https://css-tricks.com/body-border/*/
-.top, .bottom, .left, .right{
-   background: #0C8A16;
-   position: fixed;
-}
-.left, .right{
-   top: 0; bottom: 0;
-   width: 10px;
-}
-.left{ 
-   left: 0; 
-}
-.right{ 
-   right: 0; 
-}
-
-.top, .bottom{
-   left: 0; right: 0;
-   height: 10px;
-}
-
-.top{ 
-   top: 0; 
-}
-
-.bottom{ 
-   bottom: 0;
-}
 
 /* Original Source: https://codepen.io/anon/pen/EGvKZW */
 /****************   Popup Overlay   ******************/
@@ -403,7 +374,7 @@ footer{
 .overlay ul li {
    display: block;
    height: 25%;
-   height: calc(100% / 4);
+   height: calc(100% / 5);
    min-height: 45px;
    position: relative;
    opacity: 0;
@@ -461,6 +432,52 @@ nav{
 
 .stop-menu{
    display:none;
+}
+
+.flex-profile{
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   width: 100%;
+   margin: 2em 0 0 0;
+}
+
+.flex-profile-2{
+   display: flex;
+   align-items: center;
+   flex-flow: column;
+   width: 100%;
+   margin: 2em 0 0 0;
+}
+
+.flex-profile-2 h1{
+   font-size: 4em;
+   margin: 0;
+}
+
+.flex-profile-2 p{
+   margin: .5em 0;
+}
+
+.flex-profile img{
+   -webkit-clip-path: circle(50% at 50% 50%);
+clip-path: circle(50% at 50% 50%);
+   width: 10em;
+   margin: 1em 1em;
+}
+
+.flex-profile a{
+   color: #0C8A16;
+   font-size: 2em;
+   font-weight: bold;
+}
+
+.italics{
+   font-style: italic;
+}
+
+.space-bottom{
+   margin-bottom: 3em;
 }
 
 /************************** Mobile Stuff *****************/
