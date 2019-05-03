@@ -1,25 +1,25 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>B-Line Info</title>
-<link rel="stylesheet" type="text/css" href="styles/tacomode.css" />
-<link rel="stylesheet" type="text/css" href="styles/style.css" />
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-</head>
-<body>
-    <div class="header">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>B-Line Info</title>
+      <link rel="stylesheet" type="text/css" href="styles/tacomode.css" />
+      <link rel="stylesheet" type="text/css" href="styles/style.css" />
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   </head>
+   <body>
+      <div class="header">
          <div class="button_container" id="toggle">
             <span class="top"></span>
             <span class="middle"></span>
             <span class="bottom"></span>
          </div>
-           <div class="background_map"></div>
-           <h1>About</h1>
+         <div class="background_map"></div>
+         <h1>About</h1>
 
-           <a href="index.html"> <img src="images/logoThing.png" class="logo"> </a>
-    </div>
+         <a href="index.html"> <img src="images/logoThing.png" class="logo"> </a>
+      </div>
       <main class="space-bottom">
 
          <!-- Hamburger Nav - Start -->
@@ -65,45 +65,46 @@
             </nav>
          </div>
          <!-- Ham Nav - End-->
-         
-         
+
+
          <div class="flex-profile">
             <img src="images/profile2.jpg">
             <img src="images/profile3.jpg">
             <img src="images/profile1.jpg">
          </div>
-         
+
          <div class="flex-profile">
             <p class="italics">Team: Rhonda Mak, Rachel Chmielinski, Brandon Chen </p>
          </div>
-         
+
          <div class="flex-profile-2">
             <h1>Links</h1>
             <a href="https://github.com/RCcola01/green-line-stops-info"> <p> Github </p> </a>
             <a href="ProjectProposal.pdf"><p> Original Project Proposals</p></a>
-            <p> <a href="Citations.pdf"> Citations </a></p>
             <p> <a href="UXreport.pdf"> UX Report </a></p>
+            <p> <a href="slides.pdf"> Presentation Slides </a></p>
+            <p> <a href="Citations.pdf"> Citations </a></p>
          </div>
-         
-     </main>
+
+      </main>
 
 
-   <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDhuusJGNemjla4yjnhHkhfZjYWkntLw-I",
-    authDomain: "green-line-info.firebaseapp.com",
-    databaseURL: "https://green-line-info.firebaseio.com",
-    projectId: "green-line-info",
-    storageBucket: "green-line-info.appspot.com",
-    messagingSenderId: "346128859056"
-  };
-  firebase.initializeApp(config);
-</script>
-       
-   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-   <script src="ham.js"></script>
-   <script src="main.js"></script>
-</body>
+      <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+      <script>
+         // Initialize Firebase
+         var config = {
+            apiKey: "AIzaSyDhuusJGNemjla4yjnhHkhfZjYWkntLw-I",
+            authDomain: "green-line-info.firebaseapp.com",
+            databaseURL: "https://green-line-info.firebaseio.com",
+            projectId: "green-line-info",
+            storageBucket: "green-line-info.appspot.com",
+            messagingSenderId: "346128859056"
+         };
+         firebase.initializeApp(config);
+      </script>
+
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+      <script src="ham.js"></script>
+      <script src="main.js"></script>
+   </body>
 </html>
